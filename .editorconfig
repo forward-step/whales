@@ -1,0 +1,18 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# 根目录的配置文件，编辑器会由当前目录向上查找，如果找到 `roor = true` 的文件，则不再查找
+root = true
+
+[*]
+end_of_line = lf                    # Linux换行符的\n
+insert_final_newline = false        # 是否在文件结尾插入新行
+indent_style = space                # 缩进使用空格
+indent_size = 4                     # 缩进的大小
+quote_type = single                 # 使用单引号
+spaces_around_operators = true      # 运算符两遍都有空格
+
+[*.json]
+indent_size = 4
+
+[package.json]                      # 对 package.json 生效
+indent_size = 2
