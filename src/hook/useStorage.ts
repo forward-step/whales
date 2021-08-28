@@ -1,4 +1,4 @@
-import { onMounted, ref, watch } from 'vue';
+import { ref, watch } from 'vue';
 
 export function useStorage<T>(
 	key: string,
@@ -22,14 +22,12 @@ export function useStorage<T>(
 	const value = ref<T>(defaultValue);
 
 	// 获取初始值
-	onMounted(() => {
-		const current = storage.getItem(slotKey);
-		try {
-			current && (value.value = deserialize(current));
-		} catch (e) {
-			// value.value = defaultValue as any;
-		}
-	});
+    const current = storage.getItem(slotKey);
+    try {
+        current && (value.value = deserialize(current));
+    } catch (e) {
+        // value.value = defaultValue as any;
+    }
 
 	// 当value改变的时候，同步到storage
 	watch(
