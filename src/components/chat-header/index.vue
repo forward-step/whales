@@ -58,7 +58,7 @@ export default defineComponent({
         height: 35px;
         margin-left: 9px;
         border-radius: 100px !important;
-        cursor: pointer;
+        .clickable;
     }
     &__text {
         width: 100%;
@@ -99,6 +99,6 @@ export default defineComponent({
     background: #f4f3f8;
     text-align: center;
     line-height: 35px;
-    cursor: pointer;
+    .clickable;
 }
 </style>

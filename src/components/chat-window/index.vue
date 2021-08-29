@@ -91,6 +91,9 @@ export default defineComponent({
         flex: 1;
         overflow-y: auto;
     }
+    .window::-webkit-scrollbar {
+        display: none;
+    }
 }
 .left {
     display: inline-flex;
@@ -104,7 +107,7 @@ export default defineComponent({
         font-family: Arial Black, Arial Black-Bold;
         font-weight: Bold;
         letter-spacing: 1px;
-        cursor: pointer;
+        .clickable;
     }
     &__content {
         .content;
@@ -141,8 +144,7 @@ export default defineComponent({
         line-height: 35px;
         border-radius: 100px;
         background: #ebebf4;
-        cursor: pointer;
-        user-select: none;
+        .clickable;
     }
 }
 
