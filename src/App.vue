@@ -1,6 +1,6 @@
 <template>
     <QueryClientProvider :client="queryClient">
-        <a-button>button of antdv</a-button>
+        <router-view />
     </QueryClientProvider>
 </template>
 
@@ -30,5 +30,8 @@ export default defineComponent({
 <style lang="less">
 html {
     font-size: 62.5%;
+}
+body {
+    background-color: #f3f2f2 !important;
 }
 </style>

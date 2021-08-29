@@ -9,6 +9,8 @@ import {
     Menu,
     Modal,
     Dropdown,
+    Image,
+    Divider,
 } from 'ant-design-vue';
 /**
  * 引入需要的antd组件
@@ -35,5 +37,7 @@ export const antd = {
         Vue.component(Table.name, Table);
         Vue.component(Button.name, Button);
         Vue.component(Modal.name, Modal);
+        Vue.component(Image.name, Image);
+        Vue.component(Divider.name, Divider);
     },
 };
