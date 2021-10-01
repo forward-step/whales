@@ -11,6 +11,7 @@ import {
     Dropdown,
     Image,
     Divider,
+    Avatar
 } from 'ant-design-vue';
 /**
  * 引入需要的antd组件
@@ -25,6 +26,8 @@ export const antd = {
         // 菜单
         Vue.component(Menu.name, Menu);
         Vue.component(Menu.Item.name, Menu.Item);
+        Vue.component(Menu.SubMenu.name, Menu.SubMenu);
+        Vue.component(Menu.ItemGroup.name, Menu.ItemGroup);
         Vue.component(Dropdown.name, Dropdown); // 下拉菜单
         // 表单
         Vue.component(Form.name, Form);
@@ -34,6 +37,7 @@ export const antd = {
         Vue.component(Select.name, Select);
         Vue.component('AOption', Select.Option);
         // 其他
+        Vue.component(Avatar.name, Avatar);
         Vue.component(Table.name, Table);
         Vue.component(Button.name, Button);
         Vue.component(Modal.name, Modal);
