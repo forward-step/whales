@@ -9,40 +9,60 @@
             </a-button>
         </a-menu-item>
 
-        <a-menu-item key="mail">
-            <template #icon>
-                <mail-outlined />
-            </template>
-            Navigation One
+        <a-menu-item key="assignment">
+            任务榜单
         </a-menu-item>
 
-        <a-menu-item key="app" disabled>
-            <template #icon>
-                <appstore-outlined />
-            </template>
-
-            Navigation Two
+        <a-menu-item key="intelligent">
+            自律达人
         </a-menu-item>
 
-        <a-sub-menu>
-            <template #icon>
-                <setting-outlined />
-            </template>
-            <template #title>Navigation Three - Submenu</template>
-            <a-menu-item-group title="Item 1">
-                <a-menu-item key="setting:1">Option 1</a-menu-item>
-                <a-menu-item key="setting:2">Option 2</a-menu-item>
-            </a-menu-item-group>
-            <a-menu-item-group title="Item 2">
-                <a-menu-item key="setting:3">Option 3</a-menu-item>
-                <a-menu-item key="setting:4">Option 4</a-menu-item>
-            </a-menu-item-group>
-        </a-sub-menu>
+        <a-menu-item key="contribute">
+            投稿须知
+        </a-menu-item>
 
-        <a-menu-item key="alipay">
-            <a href="https://antdv.com" target="_blank" rel="noopener noreferrer">
-                Navigation Four - Link
+        <a-menu-item key="business">
+            商务合作
+        </a-menu-item>
+
+        <a-menu-item key="copyright">
+            版权申明
+        </a-menu-item>
+
+        <a-menu-item key="search">
+            <a-input-group compact>
+                <a-select v-model:value="value">
+                    <a-select-option value="Option1">Option1</a-select-option>
+                    <a-select-option value="Option2">Option2</a-select-option>
+                </a-select>
+
+                <a-input-search
+                        v-model:value="value"
+                        placeholder="input search text"
+                        style="width: 200px"
+                        @search="onSearch"
+                />
+            </a-input-group>
+        </a-menu-item>
+
+        <a-menu-item key="communication">
+            <a-badge count="5">
+                <a href="#" class="head-example" />
+            </a-badge>
+        </a-menu-item>
+
+        <a-menu-item key="notification">
+            <a href="#">
+                <a-badge count="5">
+                    <span class="head-example" />
+                </a-badge>
             </a>
+        </a-menu-item>
+
+        <a-menu-item key="portrait">
+            <a-avatar :size="64">
+                <template #icon><UserOutlined /></template>
+            </a-avatar>
         </a-menu-item>
     </a-menu>
 </template>
@@ -57,10 +77,17 @@
         setup() {
             const current = ref(['mail']);
             const logoImg = Image.LOGO;
+            const value = ref('');
+            const onSearch = (searchValue) => {
+                console.log('use value', searchValue);
+                console.log('or use this.value', value.value);
+            };
             return {
                 current,
                 logoImg,
-                size: ref(8)
+                size: ref(8),
+                value,
+                onSearch
             };
         },
         components: {
@@ -91,4 +118,12 @@
     top: 5px;
     right: 11px;
 }
+.head-example {
+     width: 42px;
+     height: 42px;
+     border-radius: 4px;
+     background: #eee;
+     display: inline-block;
+     vertical-align: middle;
+ }
 </style>

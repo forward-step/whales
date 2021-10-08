@@ -11,7 +11,9 @@ import {
     Dropdown,
     Image,
     Divider,
-    Avatar
+    Avatar,
+    InputSearch,
+    Badge
 } from 'ant-design-vue';
 /**
  * 引入需要的antd组件
@@ -34,6 +36,7 @@ export const antd = {
         Vue.component(Form.Item.name, Form.Item);
         Vue.component(Input.name, Input);
         Vue.component(Input.TextArea.name, Input.TextArea);
+        Vue.component(InputSearch.name, InputSearch);
         Vue.component(Select.name, Select);
         Vue.component('AOption', Select.Option);
         // 其他
@@ -43,5 +46,6 @@ export const antd = {
         Vue.component(Modal.name, Modal);
         Vue.component(Image.name, Image);
         Vue.component(Divider.name, Divider);
+        Vue.component(Badge.name, Badge);
     },
 };
