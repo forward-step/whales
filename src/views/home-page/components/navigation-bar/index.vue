@@ -2,7 +2,7 @@
     <a-menu class="common" v-model:selectedKeys="current" mode="horizontal">
 
         <a-menu-item key="logo">
-            <a-avatar :src=logoImg />
+            <a-avatar :src=logoImg size="large" />
             <a-button type="text" class="logo-button">
                 <div class="logo-text-english">WhaleHub</div>
                 <div class="logo-text-chinese">每个孤独的人，都值得被拥抱</div>
@@ -84,16 +84,14 @@
 
         <a-menu-item key="notification">
             <a href="#">
-                <a-badge count="5">
-                    <span class="head-example" />
+                <a-badge class="a-badge-style" count="5" :offset="[-8, 23]" >
+                  <iconfont type="icon-tixing" class="iconfont-style" />
                 </a-badge>
             </a>
         </a-menu-item>
 
         <a-menu-item key="portrait">
-            <a-avatar :src=portraitImg :size="64">
-                <template #icon><UserOutlined /></template>
-            </a-avatar>
+            <a-avatar :src=portraitImg size="large" />
         </a-menu-item>
     </a-menu>
 </template>
@@ -141,6 +139,37 @@
 .common {
   background: rgb(95, 85, 166);
   color: white;
+  height: 60px;
+  line-height: 60px;
+}
+
+.iconfont-style {
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.a-badge-style {
+  font-size: 12px;
+}
+
+/deep/ .ant-badge-count {
+  z-index: 1;
+  min-width: 12px;
+  height: 12px;
+  padding: 0 3px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  white-space: nowrap;
+  text-align: center;
+  background: #ff4d4f;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #fff;
 }
 
 .logo-button {
