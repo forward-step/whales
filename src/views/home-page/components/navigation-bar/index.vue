@@ -52,46 +52,56 @@
 <!--              style="width: 200px"-->
 <!--              @search="onSearch"-->
 <!--          />-->
-          <a-dropdown>
-            <template #overlay>
-              <a-menu @click="handleMenuClick">
-                <a-menu-item key="1">
-                  <UserOutlined />
-                  1st menu item
-                </a-menu-item>
-                <a-menu-item key="2">
-                  <UserOutlined />
-                  2nd menu item
-                </a-menu-item>
-                <a-menu-item key="3">
-                  <UserOutlined />
-                  3rd item
-                </a-menu-item>
-              </a-menu>
+
+
+          <a-input placeholder="" v-model:value="searchKey">
+            <template #prefix>
+              <a-dropdown>
+                <template #overlay>
+                  <a-menu @click="handleMenuClick">
+                    <a-menu-item key="1">
+                      <UserOutlined />
+                      1st menu item
+                    </a-menu-item>
+                    <a-menu-item key="2">
+                      <UserOutlined />
+                      2nd menu item
+                    </a-menu-item>
+                    <a-menu-item key="3">
+                      <UserOutlined />
+                      3rd item
+                    </a-menu-item>
+                  </a-menu>
+                </template>
+                <a-dropdown-button>
+                  标签
+                  <DownOutlined />
+                </a-dropdown-button>
+              </a-dropdown>
             </template>
-            <a-button>
-              Button
+
+            <template #suffix>
               <iconfont type="icon-sousuo" />
-            </a-button>
-          </a-dropdown>
+            </template>
+          </a-input>
         </a-menu-item>
 
         <a-menu-item key="communication">
-            <a-badge count="5">
-                <a href="#" class="head-example" />
+            <a-badge count="5" :offset="[-8, 23]" >
+              <iconfont type="icon-duihuaqipao" class="iconfont-style" />
             </a-badge>
         </a-menu-item>
 
         <a-menu-item key="notification">
             <a href="#">
-                <a-badge class="a-badge-style" count="5" :offset="[-8, 23]" >
+                <a-badge count="5" :offset="[-8, 23]" >
                   <iconfont type="icon-tixing" class="iconfont-style" />
                 </a-badge>
             </a>
         </a-menu-item>
 
         <a-menu-item key="portrait">
-            <a-avatar :src=portraitImg size="large" />
+            <a-avatar class="a-avatar-style" :src=portraitImg size="large" />
         </a-menu-item>
     </a-menu>
 </template>
@@ -108,6 +118,7 @@
             const logoImg = Image.LOGO;
             const portraitImg = Image.PORTRAIT;
             const value = ref('');
+            const searchKey = ref('');
             const onSearch = (searchValue) => {
                 console.log('use value', searchValue);
                 console.log('or use this.value', value.value);
@@ -121,6 +132,7 @@
                 portraitImg,
                 size: ref(8),
                 value,
+                searchKey,
                 onSearch,
                 handleMenuClick
             };
@@ -140,7 +152,7 @@
   background: rgb(95, 85, 166);
   color: white;
   height: 60px;
-  line-height: 60px;
+  line-height: 53px;
 }
 
 .iconfont-style {
@@ -152,8 +164,11 @@
   vertical-align: middle;
 }
 
-.a-badge-style {
-  font-size: 12px;
+.a-avatar-style {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
 }
 
 /deep/ .ant-badge-count {
@@ -183,6 +198,7 @@
     position: absolute;
     right: 100px;
     bottom: 16px;
+    color: white;
 }
 .logo-text-chinese {
     font-size: 4px;
@@ -190,6 +206,7 @@
     position: relative;
     top: 5px;
     right: 11px;
+    color: white;
 }
 .head-example {
      width: 42px;
