@@ -1,8 +1,8 @@
 <template>
     <a-menu class="common" v-model:selectedKeys="current" mode="horizontal">
 
-        <a-menu-item key="logo">
-            <a-avatar :src=logoImg size="large" />
+        <a-menu-item key="logo" style="padding-left: 10px">
+            <a-avatar :src=logoImg :size="64" />
             <a-button type="text" class="logo-button">
                 <div class="logo-text-english">WhaleHub</div>
                 <div class="logo-text-chinese">每个孤独的人，都值得被拥抱</div>
@@ -151,8 +151,8 @@
 .common {
   background: rgb(95, 85, 166);
   color: white;
-  height: 60px;
-  line-height: 53px;
+  height: 68px;
+  line-height: 60px;
 }
 
 .iconfont-style {
@@ -190,23 +190,26 @@
 .logo-button {
     position: relative;
     padding-right: 0px;
+    right: 20px;
+    top: 8px;
 }
 .logo-text-english {
-    font-size: 8px;
+    font-size: 23px;
     font-weight:bold;
     font-family: "Times New Roman",serif;
     position: absolute;
-    right: 100px;
-    bottom: 16px;
-    color: white;
+    right: 40px;
+    bottom: 15px;
+    color: #E2E0EF;
 }
 .logo-text-chinese {
-    font-size: 4px;
+    font-size: 12px;
     font-family: SimSun, STSong,serif;
     position: relative;
     top: 5px;
-    right: 11px;
+    right: 15px;
     color: white;
+    -webkit-transform:scale(0.75);
 }
 .head-example {
      width: 42px;
