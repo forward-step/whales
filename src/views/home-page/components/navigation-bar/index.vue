@@ -9,7 +9,7 @@
             </a-button>
         </a-menu-item>
 
-        <a-menu-item key="assignment">
+        <a-menu-item key="assignment" style="padding-left: 90px">
             任务榜单
         </a-menu-item>
 
@@ -29,7 +29,7 @@
             版权申明
         </a-menu-item>
 
-        <a-menu-item key="search">
+        <a-menu-item key="search" style="padding-left: 150px">
 <!--          <a-input-group size="large">-->
 <!--            <a-row :gutter="8">-->
 <!--              <a-col :span="5">-->
@@ -54,7 +54,7 @@
 <!--          />-->
 
 
-          <a-input placeholder="" v-model:value="searchKey">
+          <a-input placeholder="" v-model:value="searchKey" style="width: 319px">
             <template #prefix>
               <a-dropdown>
                 <template #overlay>
@@ -100,7 +100,7 @@
             </a>
         </a-menu-item>
 
-        <a-menu-item key="portrait">
+        <a-menu-item key="portrait"  style="padding-right: 10px">
             <a-avatar class="a-avatar-style" :src=portraitImg size="large" />
         </a-menu-item>
     </a-menu>
@@ -185,6 +185,18 @@
   background: #ff4d4f;
   border-radius: 6px;
   box-shadow: 0 0 0 1px #fff;
+}
+
+/deep/ .ant-menu-item:hover {
+  color: white;
+}
+
+/deep/ .ant-menu-item-active {
+  color: white;
+}
+
+/deep/ .ant-menu-item-selected {
+  color: white;
 }
 
 .logo-button {
