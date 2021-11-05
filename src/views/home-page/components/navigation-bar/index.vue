@@ -30,52 +30,28 @@
         </a-menu-item>
 
         <a-menu-item key="search" style="padding-left: 150px">
-<!--          <a-input-group size="large">-->
-<!--            <a-row :gutter="8">-->
-<!--              <a-col :span="5">-->
-<!--                <a-input v-model:value="value1" />-->
-<!--              </a-col>-->
-<!--              <a-col :span="8">-->
-<!--                <a-input v-model:value="value2" />-->
-<!--              </a-col>-->
-<!--            </a-row>-->
-<!--          </a-input-group>-->
-<!--            <a-input-group compact>-->
-<!--                <a-select v-model:value="value">-->
-<!--                    <a-select-option value="Option1">Option1</a-select-option>-->
-<!--                    <a-select-option value="Option2">Option2</a-select-option>-->
-<!--                </a-select>-->
-<!--            </a-input-group>-->
-<!--          <a-input-search-->
-<!--              v-model:value="value"-->
-<!--              placeholder="input search text"-->
-<!--              style="width: 200px"-->
-<!--              @search="onSearch"-->
-<!--          />-->
-
-
-          <a-input placeholder="" v-model:value="searchKey" style="width: 319px">
+          <a-input placeholder="" v-model:value="searchKey" class="a-input-style">
             <template #prefix>
               <a-dropdown>
                 <template #overlay>
-                  <a-menu @click="handleMenuClick">
-                    <a-menu-item key="1">
-                      <UserOutlined />
-                      1st menu item
+                  <a-menu>
+                    <a-menu-item key="1" @click="handleMenuClick('夕阳')">
+                      <iconfont type="icon-biaoqian2" />
+                      夕阳
                     </a-menu-item>
-                    <a-menu-item key="2">
-                      <UserOutlined />
-                      2nd menu item
+                    <a-menu-item key="2" @click="handleMenuClick('云海')">
+                      <iconfont type="icon-biaoqian2" />
+                      云海
                     </a-menu-item>
-                    <a-menu-item key="3">
-                      <UserOutlined />
-                      3rd item
+                    <a-menu-item key="3" @click="handleMenuClick('星光')">
+                      <iconfont type="icon-biaoqian2" />
+                      星光
                     </a-menu-item>
                   </a-menu>
                 </template>
-                <a-dropdown-button>
-                  标签
-                  <DownOutlined />
+                <a-dropdown-button class="a-dropdown-button-style">
+                  {{searchLabel}}
+                  <CaretDownOutlined style="font-size: 12px" />
                 </a-dropdown-button>
               </a-dropdown>
             </template>
@@ -109,7 +85,7 @@
 <script>
     import { defineComponent, ref } from 'vue';
     import {Image} from "@/common/entity/navigation-bar/Image";
-    import { MailOutlined, AppstoreOutlined, SettingOutlined, DownOutlined, UserOutlined } from '@ant-design/icons-vue';
+    import { MailOutlined, AppstoreOutlined, SettingOutlined, DownOutlined, UserOutlined, CaretDownOutlined } from '@ant-design/icons-vue';
 
     export default defineComponent({
         name: 'NavigationBar',
@@ -119,12 +95,14 @@
             const portraitImg = Image.PORTRAIT;
             const value = ref('');
             const searchKey = ref('');
+            const searchLabel = ref('标签')
             const onSearch = (searchValue) => {
                 console.log('use value', searchValue);
                 console.log('or use this.value', value.value);
             };
-            const handleMenuClick = () => {
-              console.log("==================")
+            const handleMenuClick = (searchLabel) => {
+              console.log("==================");
+              this.searchLabel = searchLabel;
             }
             return {
                 current,
@@ -133,6 +111,7 @@
                 size: ref(8),
                 value,
                 searchKey,
+                searchLabel,
                 onSearch,
                 handleMenuClick
             };
@@ -142,7 +121,8 @@
             AppstoreOutlined,
             SettingOutlined,
             DownOutlined,
-            UserOutlined
+            UserOutlined,
+            CaretDownOutlined
         }
     });
 </script>
@@ -169,6 +149,20 @@
   height: 50px;
   line-height: 50px;
   font-size: 18px;
+}
+
+.a-input-style {
+  width: 319px;
+  height: 35px;
+  background: #CECAE0;
+}
+
+input {
+  background: #CECAE0;
+}
+
+.a-dropdown-button-style {
+  background: #D3D0E6;
 }
 
 /deep/ .ant-badge-count {
