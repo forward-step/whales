@@ -1,7 +1,7 @@
 <template>
     <a-menu class="common" v-model:selectedKeys="current" mode="horizontal">
 
-        <a-menu-item key="logo" style="padding-left: 10px">
+        <a-menu-item key="logo" style="padding-left: 10px;padding-right: 90px">
             <a-avatar :src=logoImg :size="64" />
             <a-button type="text" class="logo-button">
                 <div class="logo-text-english">WhaleHub</div>
@@ -9,7 +9,7 @@
             </a-button>
         </a-menu-item>
 
-        <a-menu-item key="assignment" style="padding-left: 90px">
+        <a-menu-item key="assignment">
             任务榜单
         </a-menu-item>
 
@@ -49,9 +49,9 @@
                     </a-menu-item>
                   </a-menu>
                 </template>
-                <a-dropdown-button class="a-dropdown-button-style">
-                  {{searchLabel}}
-                  <CaretDownOutlined style="font-size: 12px" />
+                <a-dropdown-button>
+                  <span style="color: #49475D">{{searchLabel}}&nbsp;&nbsp;</span>
+                  <CaretDownOutlined style="font-size: 12px;color: #87859B;" />
                 </a-dropdown-button>
               </a-dropdown>
             </template>
@@ -100,10 +100,6 @@
                 console.log('use value', searchValue);
                 console.log('or use this.value', value.value);
             };
-            const handleMenuClick = (searchLabel) => {
-              console.log("==================");
-              this.searchLabel = searchLabel;
-            }
             return {
                 current,
                 logoImg,
@@ -112,9 +108,13 @@
                 value,
                 searchKey,
                 searchLabel,
-                onSearch,
-                handleMenuClick
+                onSearch
             };
+        },
+        methods: {
+          handleMenuClick: function (searchLabel) {
+            this.searchLabel = searchLabel;
+          }
         },
         components: {
             MailOutlined,
@@ -128,6 +128,8 @@
 </script>
 
 <style scoped>
+@import "../../../../assets/css/style.css";
+
 .common {
   background: rgb(95, 85, 166);
   color: white;
@@ -157,12 +159,25 @@
   background: #CECAE0;
 }
 
-input {
-  background: #CECAE0;
-}
-
-.a-dropdown-button-style {
-  background: #D3D0E6;
+/deep/ .ant-input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 4px 11px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.5715;
+  background-color: #CECAE0;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  transition: all 0.3s;
 }
 
 /deep/ .ant-badge-count {
@@ -179,18 +194,6 @@ input {
   background: #ff4d4f;
   border-radius: 6px;
   box-shadow: 0 0 0 1px #fff;
-}
-
-/deep/ .ant-menu-item:hover {
-  color: white;
-}
-
-/deep/ .ant-menu-item-active {
-  color: white;
-}
-
-/deep/ .ant-menu-item-selected {
-  color: white;
 }
 
 .logo-button {
@@ -217,12 +220,4 @@ input {
     color: white;
     -webkit-transform:scale(0.75);
 }
-.head-example {
-     width: 42px;
-     height: 42px;
-     border-radius: 4px;
-     background: #eee;
-     display: inline-block;
-     vertical-align: middle;
- }
 </style>
