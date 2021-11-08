@@ -1,6 +1,14 @@
 <template>
     <navigation-bar />
-    <dynamic-dynamic />
+
+  <a-row style="height: 30px;text-align: center">
+    <a-col :span="3"></a-col>
+    <a-col :span="18">
+      <dynamic-dynamic />
+    </a-col>
+    <a-col :span="3"></a-col>
+  </a-row>
+
 </template>
 
 <script lang="ts">

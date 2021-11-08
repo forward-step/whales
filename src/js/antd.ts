@@ -14,7 +14,9 @@ import {
     Avatar,
     InputSearch,
     Badge,
-    Grid
+    Row,
+    Col,
+    Carousel
 } from 'ant-design-vue';
 import { createFromIconfontCN } from '@ant-design/icons-vue';
 /**
@@ -27,7 +29,8 @@ export const antd = {
         Vue.component(Layout.Header.name, Layout.Header);
         Vue.component(Layout.Content.name, Layout.Content);
         Vue.component(Layout.Sider.name, Layout.Sider);
-        Vue.component(Grid.name, Grid);
+        Vue.component(Row.name, Row);
+        Vue.component(Col.name, Col);
         // 菜单
         Vue.component(Menu.name, Menu);
         Vue.component(Menu.Item.name, Menu.Item);
@@ -50,6 +53,7 @@ export const antd = {
         Vue.component(Image.name, Image);
         Vue.component(Divider.name, Divider);
         Vue.component(Badge.name, Badge);
+        Vue.component(Carousel.name, Carousel);
         Vue.component('iconfont', createFromIconfontCN({
             scriptUrl: '//at.alicdn.com/t/font_2775308_0nm0y19nnbu.js', // 在 iconfont.cn 上生成
             // scriptUrl: '@/assets/iconfont/iconfont.js', // 在 iconfont.cn 上生成
