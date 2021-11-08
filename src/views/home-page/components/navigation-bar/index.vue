@@ -49,10 +49,10 @@
                     </a-menu-item>
                   </a-menu>
                 </template>
-                <a-dropdown-button>
+                <span>
                   <span style="color: #49475D">{{searchLabel}}&nbsp;&nbsp;</span>
                   <CaretDownOutlined class="CaretDownOutlined-style" />
-                </a-dropdown-button>
+                </span>
               </a-dropdown>
             </template>
 
