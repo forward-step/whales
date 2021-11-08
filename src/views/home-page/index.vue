@@ -1,5 +1,5 @@
 <template>
-<!--    <navigation-bar />-->
+    <navigation-bar />
     <dynamic-dynamic />
 </template>
 

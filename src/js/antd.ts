@@ -13,7 +13,8 @@ import {
     Divider,
     Avatar,
     InputSearch,
-    Badge
+    Badge,
+    Grid
 } from 'ant-design-vue';
 import { createFromIconfontCN } from '@ant-design/icons-vue';
 /**
@@ -26,6 +27,7 @@ export const antd = {
         Vue.component(Layout.Header.name, Layout.Header);
         Vue.component(Layout.Content.name, Layout.Content);
         Vue.component(Layout.Sider.name, Layout.Sider);
+        Vue.component(Grid.name, Grid);
         // 菜单
         Vue.component(Menu.name, Menu);
         Vue.component(Menu.Item.name, Menu.Item);

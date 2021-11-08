@@ -17,8 +17,8 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/home',
         name: 'home',
-        // component: () => import('@/views/home-page/index.vue'),
-        component: () => import('@/views/home-page/components/navigation-bar/index.vue'),
+        component: () => import('@/views/home-page/index.vue'),
+        // component: () => import('@/views/home-page/components/navigation-bar/index.vue'),
         meta: {
             title: '首页'
         }
