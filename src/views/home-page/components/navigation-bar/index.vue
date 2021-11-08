@@ -51,7 +51,7 @@
                 </template>
                 <a-dropdown-button>
                   <span style="color: #49475D">{{searchLabel}}&nbsp;&nbsp;</span>
-                  <CaretDownOutlined style="font-size: 12px;color: #87859B;" />
+                  <CaretDownOutlined class="CaretDownOutlined-style" />
                 </a-dropdown-button>
               </a-dropdown>
             </template>
@@ -219,5 +219,11 @@
     right: 15px;
     color: white;
     -webkit-transform:scale(0.75);
+}
+
+.CaretDownOutlined-style {
+  font-size: 12px;
+  color: #87859B;
+  -webkit-transform:scale(0.65);
 }
 </style>
