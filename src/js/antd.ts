@@ -16,7 +16,10 @@ import {
     Badge,
     Row,
     Col,
-    Carousel
+    Carousel,
+    Card,
+    Tabs,
+    TabPane
 } from 'ant-design-vue';
 import { createFromIconfontCN } from '@ant-design/icons-vue';
 /**
@@ -54,6 +57,9 @@ export const antd = {
         Vue.component(Divider.name, Divider);
         Vue.component(Badge.name, Badge);
         Vue.component(Carousel.name, Carousel);
+        Vue.component(Card.name, Card);
+        Vue.component(Tabs.name, Tabs);
+        Vue.component("ATabPane", TabPane);
         Vue.component('iconfont', createFromIconfontCN({
             scriptUrl: '//at.alicdn.com/t/font_2775308_0nm0y19nnbu.js', // 在 iconfont.cn 上生成
             // scriptUrl: '@/assets/iconfont/iconfont.js', // 在 iconfont.cn 上生成

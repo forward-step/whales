@@ -6,34 +6,53 @@
 <!--      <a-col :span="3">col-3</a-col>-->
 <!--    </a-row>-->
 
-  <a-carousel arrows>
-    <template #prevArrow>
-      <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
-        <left-circle-outlined />
-      </div>
-    </template>
+  <a-row>
+    <a-button type="text">推荐好文</a-button>
+  </a-row>
 
-    <div><h3>1</h3></div>
-    <div><h3>2</h3></div>
-    <div><h3>3</h3></div>
-    <div><h3>4</h3></div>
+  <a-card>
+    <a-carousel arrows>
+      <template #prevArrow>
+        <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
+          <left-circle-outlined />
+        </div>
+      </template>
 
-    <template #nextArrow>
-      <div class="custom-slick-arrow" style="right: 10px">
-        <right-circle-outlined />
-      </div>
-    </template>
-  </a-carousel>
+      <div><h3>1</h3></div>
+      <div><h3>2</h3></div>
+      <div><h3>3</h3></div>
+      <div><h3>4</h3></div>
 
+      <template #nextArrow>
+        <div class="custom-slick-arrow" style="right: 10px">
+          <right-circle-outlined />
+        </div>
+      </template>
+
+    </a-carousel>
+
+    <a-tabs v-model:activeKey="activeKey">
+      <a-tab-pane key="1" tab="Tab 1">1</a-tab-pane>
+      <a-tab-pane key="2" tab="Tab 2" force-render>2</a-tab-pane>
+      <a-tab-pane key="3" tab="Tab 3">3</a-tab-pane>
+    </a-tabs>
+  </a-card>
 
 </template>
 
 <script>
-    import { defineComponent } from 'vue';
+    import { defineComponent, ref } from 'vue';
     import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons-vue';
 
     export default defineComponent({
         name: "DynamicCarousel",
+        setup() {
+            const activeKey = ref('');
+
+            return {
+              activeKey,
+            }
+        },
         components: {
           LeftCircleOutlined,
           RightCircleOutlined,
