@@ -6,8 +6,13 @@
 <!--      <a-col :span="3">col-3</a-col>-->
 <!--    </a-row>-->
 
-  <a-row>
-    <a-button type="text">推荐好文</a-button>
+  <a-row style="margin-top: 30px;">
+    <a-col :span="1">
+      <a-avatar :src=crownImg size="large" />
+    </a-col>
+    <a-col :span="2">
+      推荐好文
+    </a-col>
   </a-row>
 
   <a-card>
@@ -42,15 +47,20 @@
 
 <script>
     import { defineComponent, ref } from 'vue';
+    import {Image} from "@/common/entity/dynamic-carousel/Image"
     import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons-vue';
 
     export default defineComponent({
         name: "DynamicCarousel",
         setup() {
             const activeKey = ref('');
+            const crownImg = Image.CROWN;
+            const whaleImg = Image.WHALE;
 
             return {
               activeKey,
+              crownImg,
+              whaleImg
             }
         },
         components: {
