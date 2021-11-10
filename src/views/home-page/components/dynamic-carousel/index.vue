@@ -10,13 +10,18 @@
     <a-col :span="1" style="text-align: right">
       <a-avatar :src=crownImg size="large" />
     </a-col>
-    <a-col :span="2">
+    <a-col :span="5">
       <div class="recommend-style">
         <div style="text-align: left">
         <span class="recommend-font-style">
           推荐好文
         </span>
         </div>
+      </div>
+    </a-col>
+    <a-col :span="1">
+      <div class="label-style">
+        <span>学习</span>
       </div>
     </a-col>
   </a-row>
@@ -77,6 +82,22 @@
 </script>
 
 <style scoped>
+.label-style {
+  font-size: 16px;
+  font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;
+  text-align: center;
+  color: rgb(119, 119, 119);
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 34px;
+  opacity: 1;
+}
+
+.label-style:hover {
+  color: rgb(255, 228, 67);
+  border-bottom: 3px solid rgb(255, 228, 67);
+}
+
 .recommend-style {
   font-size: 72px;
   font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Helvetica, Tahoma, Arial, "Microsoft YaHei", 微软雅黑, sans-serif;
