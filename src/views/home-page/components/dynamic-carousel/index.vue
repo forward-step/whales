@@ -19,9 +19,25 @@
         </div>
       </div>
     </a-col>
-    <a-col :span="1">
+
+    <a-col :span="2">
       <div class="label-style">
         <span>学习</span>
+      </div>
+    </a-col>
+    <a-col :span="2">
+      <div class="label-style">
+        <span>影视</span>
+      </div>
+    </a-col>
+    <a-col :span="2">
+      <div class="label-style">
+        <span>读书</span>
+      </div>
+    </a-col>
+    <a-col :span="2">
+      <div class="label-style">
+        <span>更多</span>
       </div>
     </a-col>
   </a-row>
@@ -83,6 +99,8 @@
 
 <style scoped>
 .label-style {
+  float: right;
+  width: 34px;
   font-size: 16px;
   font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;
   text-align: center;
