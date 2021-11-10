@@ -1,11 +1,4 @@
 <template>
-<!--  <a-button type="primary">Primary Button</a-button>-->
-<!--    <a-row style="height: 30px;text-align: center">-->
-<!--      <a-col :span="3">col-3</a-col>-->
-<!--      <a-col :span="18" style="background: lightyellow;">col-18</a-col>-->
-<!--      <a-col :span="3">col-3</a-col>-->
-<!--    </a-row>-->
-
   <a-row style="margin-top: 30px;">
     <a-col :span="1" style="text-align: right">
       <a-avatar :src=crownImg size="large" />
@@ -35,10 +28,16 @@
         <span>读书</span>
       </div>
     </a-col>
-    <a-col :span="2">
+    <a-col :span="1">
       <div class="label-style">
         <span>更多</span>
       </div>
+    </a-col>
+    <a-col :span="1">
+      <iconfont type="icon-fangxiang" class="iconfont-style" />
+    </a-col>
+    <a-col :span="10">
+      <iconfont type="icon-fabu" class="iconfont-style2" />
     </a-col>
   </a-row>
 
@@ -98,8 +97,22 @@
 </script>
 
 <style scoped>
-.label-style {
+.iconfont-style2 {
   float: right;
+  font-size: 36px;
+  color: #767676;
+}
+
+.iconfont-style {
+  line-height: 38px;
+  float: left;
+  color: #A7A7A7;
+  position: relative;
+  right: 10px;
+}
+
+.label-style {
+  /*float: right;*/
   width: 34px;
   font-size: 16px;
   font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;
@@ -109,6 +122,7 @@
   white-space: nowrap;
   line-height: 34px;
   opacity: 1;
+  /*margin: 0 auto;*/
 }
 
 .label-style:hover {
