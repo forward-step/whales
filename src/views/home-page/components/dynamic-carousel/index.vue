@@ -7,11 +7,17 @@
 <!--    </a-row>-->
 
   <a-row style="margin-top: 30px;">
-    <a-col :span="1">
+    <a-col :span="1" style="text-align: right">
       <a-avatar :src=crownImg size="large" />
     </a-col>
     <a-col :span="2">
-      推荐好文
+      <div class="recommend-style">
+        <div style="text-align: left">
+        <span class="recommend-font-style">
+          推荐好文
+        </span>
+        </div>
+      </div>
     </a-col>
   </a-row>
 
@@ -71,6 +77,35 @@
 </script>
 
 <style scoped>
+.recommend-style {
+  font-size: 72px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Helvetica, Tahoma, Arial, "Microsoft YaHei", 微软雅黑, sans-serif;
+  text-align: center;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  white-space: pre-wrap;
+  letter-spacing: 0px;
+  word-break: break-word;
+  line-height: 75px;
+  filter: drop-shadow(rgb(169, 169, 169) 0px 6px 6px);
+  transform-origin: left top;
+  transform: scale(0.5);
+  transition: unset;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  min-width: 300px;
+}
+
+.recommend-font-style {
+  letter-spacing: 0px;
+  line-height: 75px;
+  font-weight: bold;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Helvetica, Tahoma, Arial, "Microsoft YaHei", 微软雅黑, sans-serif;
+  font-size: 62px;
+}
+
 .ant-carousel :deep(.slick-slide) {
   text-align: center;
   height: 160px;
