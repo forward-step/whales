@@ -99,7 +99,7 @@
 <style scoped>
 .iconfont-style2 {
   float: right;
-  font-size: 36px;
+  font-size: 34px;
   color: #767676;
 }
 

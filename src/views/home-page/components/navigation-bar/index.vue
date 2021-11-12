@@ -1,7 +1,7 @@
 <template>
     <a-menu class="common" v-model:selectedKeys="current" mode="horizontal">
 
-        <a-menu-item key="logo" style="padding-left: 10px;padding-right: 90px">
+        <a-menu-item key="logo" style="padding-left: 10px;padding-right: 45px">
             <a-avatar :src=logoImg :size="64" />
             <a-button type="text" class="logo-button">
                 <div class="logo-text-english">WhaleHub</div>
@@ -10,26 +10,26 @@
         </a-menu-item>
 
         <a-menu-item key="assignment">
-            任务榜单
+          <span class="a-menu-item-style">任务榜单</span>
         </a-menu-item>
 
-        <a-menu-item key="intelligent">
-            自律达人
+        <a-menu-item key="intelligent" class="a-menu-item-style">
+            <span class="a-menu-item-style">自律达人</span>
         </a-menu-item>
 
-        <a-menu-item key="contribute">
-            投稿须知
+        <a-menu-item key="contribute" class="a-menu-item-style">
+          <span class="a-menu-item-style">投稿须知</span>
         </a-menu-item>
 
-        <a-menu-item key="business">
-            商务合作
+        <a-menu-item key="business" class="a-menu-item-style">
+          <span class="a-menu-item-style">商务合作</span>
         </a-menu-item>
 
-        <a-menu-item key="copyright">
-            版权申明
+        <a-menu-item key="copyright" class="a-menu-item-style">
+          <span class="a-menu-item-style">版权申明</span>
         </a-menu-item>
 
-        <a-menu-item key="search" style="padding-left: 150px">
+        <a-menu-item key="search" style="padding-left: 95px">
           <a-input placeholder="" v-model:value="searchKey" class="a-input-style">
             <template #prefix>
               <a-dropdown>
@@ -134,7 +134,21 @@
   background: rgb(95, 85, 166);
   color: white;
   height: 68px;
-  line-height: 60px;
+  line-height: 62px;
+}
+
+.a-menu-item-style {
+  font-family: "Microsoft Yahei",serif;
+  font-weight: bold;
+  color: white;
+  display: block;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 67px;
+}
+
+.a-menu-item-style:hover {
+  background: #939DC1;
 }
 
 .iconfont-style {
