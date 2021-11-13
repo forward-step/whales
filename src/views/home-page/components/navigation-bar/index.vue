@@ -57,7 +57,7 @@
             </template>
 
             <template #suffix>
-              <iconfont type="icon-sousuo" />
+              <iconfont type="icon-sousuo" class="iconfont-search-style" />
             </template>
           </a-input>
         </a-menu-item>
@@ -135,6 +135,14 @@
   color: white;
   height: 68px;
   line-height: 62px;
+}
+
+.iconfont-search-style {
+  color: #4E4A60;
+  font-weight: bold;
+  font-size: 20px;
+  height: 18px;
+  width: 16px;
 }
 
 .a-menu-item-style {
