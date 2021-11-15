@@ -25,6 +25,10 @@
     filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px -1px 2px);
 }
 
+.ant-carousel:hover {
+    filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px -2px 4px);
+}
+
 .ant-image-img {
     width: 100%;
     height: auto;

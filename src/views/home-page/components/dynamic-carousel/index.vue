@@ -41,37 +41,53 @@
     </a-col>
   </a-row>
 
-<!--  <a-card style="background: darkseagreen; padding: 0px">-->
-<!--    -->
-<!--  </a-card>-->
 
-  <a-carousel arrows :dots="false">
-    <template #prevArrow>
-      <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
-        <LeftOutlined />
-      </div>
-    </template>
 
-    <!--      <div><h3>1</h3></div>-->
-    <!--      <div><h3>2</h3></div>-->
-    <!--      <div><h3>3</h3></div>-->
-    <!--      <div><h3>4</h3></div>-->
-    <div> <a-image :src=whaleImg :preview="false" /> </div>
-    <div> <a-image :src=whaleImg :preview="false" /> </div>
+  <div class="div-style">
+    <a-carousel arrows :dots="false">
+      <template #prevArrow>
+        <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
+          <LeftOutlined />
+        </div>
+      </template>
 
-    <template #nextArrow>
-      <div class="custom-slick-arrow" style="right: 10px">
-        <RightOutlined />
-      </div>
-    </template>
+      <div> <a-image :src=whaleImg :preview="false" /> </div>
+      <div> <a-image :src=whaleImg :preview="false" /> </div>
 
-  </a-carousel>
+      <template #nextArrow>
+        <div class="custom-slick-arrow" style="right: 10px">
+          <RightOutlined />
+        </div>
+      </template>
+    </a-carousel>
 
-<!--  <a-tabs v-model:activeKey="activeKey">-->
-<!--    <a-tab-pane key="1" tab="Tab 1">1</a-tab-pane>-->
-<!--    <a-tab-pane key="2" tab="Tab 2" force-render>2</a-tab-pane>-->
-<!--    <a-tab-pane key="3" tab="Tab 3">3</a-tab-pane>-->
-<!--  </a-tabs>-->
+    <div class="div-style1">
+      <a-row>
+        <a-col :span="6"></a-col>
+        <a-col :span="4">
+          <div class="label-style1">
+            <iconfont type="icon-solid-home" />
+            <span class="span-style">广场</span>
+            <a-divider type="vertical" class="a-divider-style" dashed />
+          </div>
+        </a-col>
+        <a-col :span="4">
+          <div class="label-style1">
+            <iconfont type="icon-dingwei" />
+            <span class="span-style">个人空间</span>
+            <a-divider type="vertical" class="a-divider-style" dashed />
+          </div>
+        </a-col>
+        <a-col :span="4">
+          <div class="label-style1">
+            <iconfont type="icon-jishiben1" />
+            <span class="span-style">个人计划</span>
+          </div>
+        </a-col>
+        <a-col :span="6"></a-col>
+      </a-row>
+    </div>
+  </div>
 
 </template>
 
@@ -103,6 +119,56 @@
 <style scoped>
 
 @import "../../../../assets/resources/dynamic-carousel/css/style.css";
+
+.a-divider-style {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  border-color: rgb(245, 241, 241);
+  margin: 0;
+  height: 30px;
+}
+
+.label-style1:hover > .span-style {
+  border-bottom: 4px solid rgb(255, 228, 67);
+  opacity: 1;
+}
+
+.span-style {
+  display: inline-block;
+  margin-top: 1px;
+  height: 59px;
+  margin-left: 4px;
+}
+
+.label-style1 {
+  font-size: 20px;
+  color: rgb(96, 96, 96);
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 60px;
+  font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;
+}
+
+.label-style1:hover {
+  color: rgb(233, 233, 233);
+}
+
+.div-style1 {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0px;
+  background: rgba(107, 128, 155, 0.5);
+  border-radius: 0px 0px 20.5px 20.5px;
+}
+
+.div-style {
+  width: 100%;
+  position: relative;
+  /*height: 75px;*/
+  /*background: darkseagreen;*/
+}
 
 .iconfont-style2 {
   float: right;
