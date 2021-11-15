@@ -1,5 +1,5 @@
 <template>
-  <a-row style="margin-top: 30px;">
+  <a-row style="margin-top: 30px;margin-bottom: 4px">
     <a-col :span="1" style="text-align: right">
       <a-avatar :src=crownImg size="large" />
     </a-col>
@@ -41,40 +41,44 @@
     </a-col>
   </a-row>
 
-  <a-card>
-    <a-carousel arrows>
-      <template #prevArrow>
-        <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
-          <left-circle-outlined />
-        </div>
-      </template>
+<!--  <a-card style="background: darkseagreen; padding: 0px">-->
+<!--    -->
+<!--  </a-card>-->
 
-      <div><h3>1</h3></div>
-      <div><h3>2</h3></div>
-      <div><h3>3</h3></div>
-      <div><h3>4</h3></div>
+  <a-carousel arrows :dots="false">
+    <template #prevArrow>
+      <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
+        <LeftOutlined />
+      </div>
+    </template>
 
-      <template #nextArrow>
-        <div class="custom-slick-arrow" style="right: 10px">
-          <right-circle-outlined />
-        </div>
-      </template>
+    <!--      <div><h3>1</h3></div>-->
+    <!--      <div><h3>2</h3></div>-->
+    <!--      <div><h3>3</h3></div>-->
+    <!--      <div><h3>4</h3></div>-->
+    <div> <a-image :src=whaleImg :preview="false" /> </div>
+    <div> <a-image :src=whaleImg :preview="false" /> </div>
 
-    </a-carousel>
+    <template #nextArrow>
+      <div class="custom-slick-arrow" style="right: 10px">
+        <RightOutlined />
+      </div>
+    </template>
 
-    <a-tabs v-model:activeKey="activeKey">
-      <a-tab-pane key="1" tab="Tab 1">1</a-tab-pane>
-      <a-tab-pane key="2" tab="Tab 2" force-render>2</a-tab-pane>
-      <a-tab-pane key="3" tab="Tab 3">3</a-tab-pane>
-    </a-tabs>
-  </a-card>
+  </a-carousel>
+
+<!--  <a-tabs v-model:activeKey="activeKey">-->
+<!--    <a-tab-pane key="1" tab="Tab 1">1</a-tab-pane>-->
+<!--    <a-tab-pane key="2" tab="Tab 2" force-render>2</a-tab-pane>-->
+<!--    <a-tab-pane key="3" tab="Tab 3">3</a-tab-pane>-->
+<!--  </a-tabs>-->
 
 </template>
 
 <script>
     import { defineComponent, ref } from 'vue';
     import {Image} from "@/common/entity/dynamic-carousel/Image"
-    import { LeftCircleOutlined, RightCircleOutlined } from '@ant-design/icons-vue';
+    import { LeftOutlined, RightOutlined } from '@ant-design/icons-vue';
 
     export default defineComponent({
         name: "DynamicCarousel",
@@ -90,13 +94,16 @@
             }
         },
         components: {
-          LeftCircleOutlined,
-          RightCircleOutlined,
+          LeftOutlined,
+          RightOutlined,
         },
     })
 </script>
 
 <style scoped>
+
+@import "../../../../assets/resources/dynamic-carousel/css/style.css";
+
 .iconfont-style2 {
   float: right;
   font-size: 34px;
@@ -161,25 +168,30 @@
 
 .ant-carousel :deep(.slick-slide) {
   text-align: center;
-  height: 160px;
-  line-height: 160px;
-  background: #364d79;
+  height: 420px;
+  line-height: 420px;
+  /*background: #364d79;*/
   overflow: hidden;
+  /*border-radius: 20.5px;*/
+  filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 3px 6px));
 }
 
 .ant-carousel :deep(.slick-arrow.custom-slick-arrow) {
-  width: 25px;
-  height: 25px;
-  font-size: 25px;
-  color: #fff;
-  background-color: rgba(31, 45, 61, 0.11);
-  opacity: 0.3;
+  width: 68px;
+  height: 128px;
+  line-height: 125px;
+  font-size: 70px;
+  color: white;
+  background-color: #E9E6E6;
+  /*position: relative;*/
+  /*bottom: 69px;*/
+  /*opacity: 0.3;*/
 }
 .ant-carousel :deep(.custom-slick-arrow:before) {
   display: none;
 }
 .ant-carousel :deep(.custom-slick-arrow:hover) {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .ant-carousel :deep(.slick-slide h3) {
