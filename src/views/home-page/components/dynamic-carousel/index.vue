@@ -41,8 +41,6 @@
     </a-col>
   </a-row>
 
-
-
   <div class="div-style">
     <a-carousel arrows :dots="false">
       <template #prevArrow>

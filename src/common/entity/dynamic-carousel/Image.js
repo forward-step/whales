@@ -6,7 +6,7 @@ export class Image {
     }
 
     static get WHALE() {
-        return require("@/assets/resources/dynamic-carousel/img/baeafa60-37b6-11ec-9a7a-c358d321878f.jpg")
+        return require("@/assets/resources/dynamic-carousel/img/baeafa60-37b6-11ec-9a7a-c358d321878f.jpg");
     }
 
 }
