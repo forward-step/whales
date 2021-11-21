@@ -1,7 +1,7 @@
 <template>
     <a-menu class="common" v-model:selectedKeys="current" mode="horizontal">
 
-        <a-menu-item key="logo" style="padding-left: 10px;padding-right: 45px">
+        <a-menu-item key="logo" style="width: 291px; padding-left: 47px;">
             <a-avatar :src=logoImg :size="64" />
             <a-button type="text" class="logo-button">
                 <div class="logo-text-english">WhaleHub</div>
@@ -29,7 +29,7 @@
           <span class="a-menu-item-style">版权申明</span>
         </a-menu-item>
 
-        <a-menu-item key="search" style="padding-left: 95px">
+        <a-menu-item key="search">
           <a-input placeholder="" v-model:value="searchKey" class="a-input-style">
             <template #prefix>
               <a-dropdown>
@@ -62,7 +62,7 @@
           </a-input>
         </a-menu-item>
 
-        <a-menu-item key="communication">
+        <a-menu-item key="communication" style="padding-left: 55px">
             <a-badge count="5" :offset="[-8, 23]" >
               <iconfont type="icon-duihuaqipao" class="iconfont-style" />
             </a-badge>
@@ -76,7 +76,7 @@
             </a>
         </a-menu-item>
 
-        <a-menu-item key="portrait"  style="padding-right: 10px">
+        <a-menu-item key="portrait"  style="padding-right: 50px">
             <a-avatar class="a-avatar-style" :src=portraitImg size="large" />
         </a-menu-item>
     </a-menu>
@@ -128,13 +128,13 @@
 </script>
 
 <style scoped>
-@import "../../../../assets/css/style.css";
+@import "../../../../assets/resources/navigation-bar/css/style.css";
 
 .common {
   background: rgb(95, 85, 166);
   color: white;
-  height: 68px;
-  line-height: 62px;
+  height: 60px;
+  line-height: 56px;
 }
 
 .iconfont-search-style {
@@ -152,7 +152,7 @@
   display: block;
   padding-right: 10px;
   padding-left: 10px;
-  height: 67px;
+  height: 60px;
 }
 
 .a-menu-item-style:hover {
@@ -229,18 +229,18 @@
     font-weight:bold;
     font-family: "Times New Roman",serif;
     position: absolute;
-    right: 40px;
-    bottom: 15px;
+    right: 39px;
+    bottom: 17px;
     color: #E2E0EF;
 }
 .logo-text-chinese {
     font-size: 12px;
     font-family: SimSun, STSong,serif;
     position: relative;
-    top: 5px;
-    right: 15px;
+    top: 4px;
+    right: 14px;
     color: white;
-    -webkit-transform:scale(0.75);
+    -webkit-transform:scale(0.80);
 }
 
 .CaretDownOutlined-style {
