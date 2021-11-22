@@ -2,12 +2,12 @@
     <navigation-bar />
 
   <a-row style="height: 30px;text-align: center">
-    <a-col :span="3"></a-col>
-    <a-col :span="18">
+    <a-col :span="2"></a-col>
+    <a-col :span="20">
       <dynamic-dynamic />
       <show-articles />
     </a-col>
-    <a-col :span="3"></a-col>
+    <a-col :span="2"></a-col>
   </a-row>
 
 </template>

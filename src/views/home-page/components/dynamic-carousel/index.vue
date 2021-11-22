@@ -1,9 +1,9 @@
 <template>
   <a-row style="margin-top: 30px;margin-bottom: 4px">
-    <a-col :span="1" style="text-align: right">
+    <a-col :span="1" style="text-align: center">
       <a-avatar :src=crownImg size="large" />
     </a-col>
-    <a-col :span="5">
+    <a-col :span="3">
       <div class="recommend-style">
         <div style="text-align: left">
         <span class="recommend-font-style">
@@ -36,56 +36,65 @@
     <a-col :span="1">
       <iconfont type="icon-fangxiang" class="iconfont-style" />
     </a-col>
-    <a-col :span="10">
-      <iconfont type="icon-fabu" class="iconfont-style2" />
-    </a-col>
+<!--    <a-col :span="10">-->
+<!--      <iconfont type="icon-fabu" class="iconfont-style2" />-->
+<!--    </a-col>-->
   </a-row>
 
-  <div class="div-style">
-    <a-carousel arrows :dots="false">
-      <template #prevArrow>
-        <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
-          <LeftOutlined />
+  <a-row>
+    <a-col :span="19">
+
+      <div class="div-style">
+        <a-carousel arrows :dots="false">
+          <template #prevArrow>
+            <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
+              <LeftOutlined />
+            </div>
+          </template>
+
+          <div> <a-image :src=whaleImg :preview="false" /> </div>
+          <div> <a-image :src=whaleImg :preview="false" /> </div>
+
+          <template #nextArrow>
+            <div class="custom-slick-arrow" style="right: 10px">
+              <RightOutlined />
+            </div>
+          </template>
+        </a-carousel>
+
+        <div class="div-style1">
+          <a-row>
+            <a-col :span="6"></a-col>
+            <a-col :span="4">
+              <div class="label-style1">
+                <iconfont type="icon-solid-home" />
+                <span class="span-style">广场</span>
+                <a-divider type="vertical" class="a-divider-style" dashed />
+              </div>
+            </a-col>
+            <a-col :span="4">
+              <div class="label-style1">
+                <iconfont type="icon-dingwei" />
+                <span class="span-style">个人空间</span>
+                <a-divider type="vertical" class="a-divider-style" dashed />
+              </div>
+            </a-col>
+            <a-col :span="4">
+              <div class="label-style1">
+                <iconfont type="icon-jishiben1" />
+                <span class="span-style">个人计划</span>
+              </div>
+            </a-col>
+            <a-col :span="6"></a-col>
+          </a-row>
         </div>
-      </template>
+      </div>
 
-      <div> <a-image :src=whaleImg :preview="false" /> </div>
-      <div> <a-image :src=whaleImg :preview="false" /> </div>
+    </a-col>
+    <a-col :span="5">
 
-      <template #nextArrow>
-        <div class="custom-slick-arrow" style="right: 10px">
-          <RightOutlined />
-        </div>
-      </template>
-    </a-carousel>
-
-    <div class="div-style1">
-      <a-row>
-        <a-col :span="6"></a-col>
-        <a-col :span="4">
-          <div class="label-style1">
-            <iconfont type="icon-solid-home" />
-            <span class="span-style">广场</span>
-            <a-divider type="vertical" class="a-divider-style" dashed />
-          </div>
-        </a-col>
-        <a-col :span="4">
-          <div class="label-style1">
-            <iconfont type="icon-dingwei" />
-            <span class="span-style">个人空间</span>
-            <a-divider type="vertical" class="a-divider-style" dashed />
-          </div>
-        </a-col>
-        <a-col :span="4">
-          <div class="label-style1">
-            <iconfont type="icon-jishiben1" />
-            <span class="span-style">个人计划</span>
-          </div>
-        </a-col>
-        <a-col :span="6"></a-col>
-      </a-row>
-    </div>
-  </div>
+    </a-col>
+  </a-row>
 
 </template>
 
@@ -121,7 +130,7 @@
 .a-divider-style {
   position: absolute;
   right: 0;
-  top: 15px;
+  top: 12px;
   border-color: rgb(245, 241, 241);
   margin: 0;
   height: 30px;
@@ -135,16 +144,16 @@
 .span-style {
   display: inline-block;
   margin-top: 1px;
-  height: 59px;
+  height: 49px;
   margin-left: 4px;
 }
 
 .label-style1 {
-  font-size: 20px;
+  font-size: 17px;
   color: rgb(96, 96, 96);
   font-weight: bold;
   white-space: nowrap;
-  line-height: 60px;
+  line-height: 50px;
   font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;
 }
 
@@ -154,10 +163,11 @@
 
 .div-style1 {
   width: 100%;
-  height: 60px;
+  height: 50px;
   position: absolute;
   bottom: 0px;
-  background: rgba(107, 128, 155, 0.5);
+  /*background: rgba(107, 128, 155, 0.5);*/
+  background: rgba(109, 136, 173, 0.6);
   border-radius: 0px 0px 20.5px 20.5px;
 }
 
@@ -185,13 +195,13 @@
 .label-style {
   /*float: right;*/
   width: 34px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;
   text-align: center;
   color: rgb(119, 119, 119);
   font-weight: bold;
   white-space: nowrap;
-  line-height: 34px;
+  line-height: 35px;
   opacity: 1;
   /*margin: 0 auto;*/
 }
@@ -210,7 +220,7 @@
   white-space: pre-wrap;
   letter-spacing: 0px;
   word-break: break-word;
-  line-height: 75px;
+  line-height: 55px;
   filter: drop-shadow(rgb(169, 169, 169) 0px 6px 6px);
   transform-origin: left top;
   transform: scale(0.5);
@@ -224,16 +234,15 @@
 
 .recommend-font-style {
   letter-spacing: 0px;
-  line-height: 75px;
   font-weight: bold;
   font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Helvetica, Tahoma, Arial, "Microsoft YaHei", 微软雅黑, sans-serif;
-  font-size: 62px;
+  font-size: 42px;
 }
 
 .ant-carousel :deep(.slick-slide) {
   text-align: center;
-  height: 420px;
-  line-height: 420px;
+  height: 300px;
+  line-height: 300px;
   /*background: #364d79;*/
   overflow: hidden;
   /*border-radius: 20.5px;*/
@@ -241,10 +250,10 @@
 }
 
 .ant-carousel :deep(.slick-arrow.custom-slick-arrow) {
-  width: 68px;
-  height: 128px;
-  line-height: 125px;
-  font-size: 70px;
+  width: 58px;
+  height: 108px;
+  line-height: 108px;
+  font-size: 40px;
   color: white;
   background-color: #E9E6E6;
   /*position: relative;*/
