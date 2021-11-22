@@ -168,7 +168,7 @@
   bottom: 0px;
   /*background: rgba(107, 128, 155, 0.5);*/
   background: rgba(109, 136, 173, 0.6);
-  border-radius: 0px 0px 20.5px 20.5px;
+  border-radius: 0px 0px 10.5px 10.5px;
 }
 
 .div-style {
