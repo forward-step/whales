@@ -29,11 +29,20 @@
     filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px -2px 4px);
 }
 
+.ant-image {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    /*display: table-cell;*/
+    /*vertical-align:middle;*/
+    /*text-align: center;*/
+}
+
 .ant-image-img {
     width: 100%;
     height: auto;
     position: relative;
-    bottom: 182px;
+    bottom: 358px;
 }
 
 /*.ant-carousel .slick-track {*/

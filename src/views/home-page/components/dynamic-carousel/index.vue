@@ -52,7 +52,7 @@
             </div>
           </template>
 
-          <div> <a-image :src=whaleImg :preview="false" /> </div>
+          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>
           <div> <a-image :src=whaleImg :preview="false" /> </div>
 
           <template #nextArrow>
@@ -109,11 +109,13 @@
             const activeKey = ref('');
             const crownImg = Image.CROWN;
             const whaleImg = Image.WHALE;
+            const blueWhaleImg = Image.BLUEWHALE;
 
             return {
               activeKey,
               crownImg,
-              whaleImg
+              whaleImg,
+              blueWhaleImg
             }
         },
         components: {
@@ -255,16 +257,18 @@
   line-height: 108px;
   font-size: 40px;
   color: white;
-  background-color: #E9E6E6;
+  /*background-color: #E9E6E6;*/
   /*position: relative;*/
   /*bottom: 69px;*/
-  /*opacity: 0.3;*/
+  /*opacity: 0.8;*/
+  background: rgb(211, 204, 204);
+  opacity: 0.5;
 }
 .ant-carousel :deep(.custom-slick-arrow:before) {
   display: none;
 }
 .ant-carousel :deep(.custom-slick-arrow:hover) {
-  opacity: 0.8;
+  opacity: 0.4;
 }
 
 .ant-carousel :deep(.slick-slide h3) {
