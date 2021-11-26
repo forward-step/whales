@@ -44,8 +44,12 @@
   <a-row>
     <a-col :span="19">
 
+      <div class="div-style2">
+        <span>#入秋了，你是否有想见的人</span>
+      </div>
+
       <div class="div-style">
-        <a-carousel arrows :dots="false">
+        <a-carousel arrows>
           <template #prevArrow>
             <div class="custom-slick-arrow" style="left: 10px;z-index: 1;">
               <LeftOutlined />
@@ -128,6 +132,24 @@
 <style scoped>
 
 @import "../../../../assets/resources/dynamic-carousel/css/style.css";
+
+.div-style2 {
+  font-size: 40px;
+  font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;
+  text-align: left;
+  color: rgb(171, 167, 167);
+  white-space: pre-wrap;
+  letter-spacing: 0px;
+  word-break: break-word;
+  line-height: 78px;
+  transform-origin: left top;
+  transform: scale(0.5);
+  transition: unset;
+  position: absolute;
+  bottom: 23px;
+  left: 23px;
+  z-index: 1;
+}
 
 .a-divider-style {
   position: absolute;
