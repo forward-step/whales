@@ -1,9 +1,9 @@
 <template>
   <a-row style="margin-top: 30px;margin-bottom: 4px">
-    <a-col :span="1" style="text-align: right">
+    <a-col :span="1" style="text-align: center">
       <a-avatar :src=hotIssueImg size="large" />
     </a-col>
-    <a-col :span="5">
+    <a-col :span="3">
       <div class="recommend-style">
         <div style="text-align: left">
         <span class="recommend-font-style">
@@ -36,8 +36,7 @@
     <a-col :span="1">
       <iconfont type="icon-fangxiang" class="iconfont-style" />
     </a-col>
-    <a-col :span="10">
-<!--      <iconfont type="icon-fabu" class="iconfont-style2" />-->
+    <a-col :span="12">
       <ReloadOutlined class="iconfont-style2" />
     </a-col>
   </a-row>
@@ -67,7 +66,7 @@
 <style scoped>
 .iconfont-style2 {
   float: right;
-  font-size: 34px;
+  font-size: 28px;
   color: #767676;
 }
 
@@ -82,13 +81,13 @@
 .label-style {
   /*float: right;*/
   width: 34px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Microsoft YaHei", 微软雅黑, -apple-system, BlinkMacSystemFont, "PingFang SC", Helvetica, Tahoma, Arial, sans-serif;
   text-align: center;
   color: rgb(119, 119, 119);
   font-weight: bold;
   white-space: nowrap;
-  line-height: 34px;
+  line-height: 35px;
   opacity: 1;
   /*margin: 0 auto;*/
 }
@@ -107,7 +106,7 @@
   white-space: pre-wrap;
   letter-spacing: 0px;
   word-break: break-word;
-  line-height: 75px;
+  line-height: 55px;
   filter: drop-shadow(rgb(169, 169, 169) 0px 6px 6px);
   transform-origin: left top;
   transform: scale(0.5);
@@ -121,9 +120,8 @@
 
 .recommend-font-style {
   letter-spacing: 0px;
-  line-height: 75px;
   font-weight: bold;
   font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Helvetica, Tahoma, Arial, "Microsoft YaHei", 微软雅黑, sans-serif;
-  font-size: 62px;
+  font-size: 42px;
 }
 </style>
