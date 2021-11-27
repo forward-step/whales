@@ -253,7 +253,7 @@
   text-align: left;
   color: rgb(51, 51, 51);
   position: relative;
-  left: 20px;
+  left: 12px;
   bottom: 4px;
 }
 
