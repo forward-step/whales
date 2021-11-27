@@ -58,6 +58,9 @@
 
           <div> <a-image :src=blueWhaleImg :preview="false" /> </div>
           <div> <a-image :src=whaleImg :preview="false" /> </div>
+          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>
+          <div> <a-image :src=whaleImg :preview="false" /> </div>
+          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>
 
           <template #nextArrow>
             <div class="custom-slick-arrow" style="right: 10px">
@@ -97,6 +100,51 @@
     </a-col>
     <a-col :span="5">
 
+      <div class="div-style3">
+        <div class="label-style2">
+          <iconfont type="icon-yonghu" style="opacity: 0.6" />
+          <span class="span-style1">创作中心</span>
+        </div>
+
+        <a-row style="padding-bottom: 5px">
+          <a-col :span="8">
+            <iconfont type="icon-caogao" class="iconfont-style3" />
+            <span class="span-style2">投稿创作</span>
+          </a-col>
+          <a-col :span="8" style="float: left">
+            <iconfont type="icon-dianfei" class="iconfont-style3" />
+            <span class="span-style2">发布瞬间</span>
+          </a-col>
+          <a-col :span="8">
+            <iconfont type="icon-asAFSDFASD" class="iconfont-style3" />
+            <span class="span-style2">安排计划</span>
+          </a-col>
+        </a-row>
+
+        <div class="label-style2">
+          <iconfont type="icon-bianji1" />
+          <span class="span-style1">记录中心</span>
+        </div>
+
+        <div class="div-style4">
+          <a-row>
+            <a-col :span="12">
+              <span class="span-praise">今日获赞数</span>
+              <span class="span-praise-num">67</span>
+              <span class="span-praise-hot">累积获赞数进热门</span>
+              <a-divider type="vertical" class="a-divider-style1" dashed />
+            </a-col>
+            <a-col :span="12">
+              <span class="span-praise">今日阅读数</span>
+              <span class="span-praise-num">128</span>
+              <span class="span-praise-hot">阅读数提高曝光度</span>
+            </a-col>
+          </a-row>
+        </div>
+
+
+      </div>
+
     </a-col>
   </a-row>
 
@@ -132,6 +180,106 @@
 <style scoped>
 
 @import "../../../../assets/resources/dynamic-carousel/css/style.css";
+
+.span-praise-hot {
+  font-size: 12px;
+  font-family: SimHei, "Heiti SC", 黑体, sans-serif;
+  text-align: left;
+  color: rgb(171, 167, 167);
+  font-weight: bold;
+  position: relative;
+  bottom: 10px;
+}
+
+.span-praise-num {
+  font-size: 30px;
+  font-family: "Arial Black";
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  display: block;
+  position: relative;
+  bottom: 5px;
+}
+
+.span-praise {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: SimHei, "Heiti SC", 黑体, sans-serif;
+  text-align: center;
+  color: rgb(171, 167, 167);
+  display: block;
+  padding-top: 22px;
+}
+
+.a-divider-style1 {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  border-color: rgb(154, 152, 152);;
+  margin: 0;
+  border-left-width: 2px;
+  height: 90px;
+}
+
+.div-style4 {
+  background: rgba(216, 216, 216, 0.6);
+  width: 100%;
+  height: 128px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0px 0px 10.5px 10.5px;
+}
+
+.span-style2 {
+  font-size: 12px;
+  font-family: SimHei, "Heiti SC", 黑体, sans-serif;
+  text-align: left;
+  color: rgb(15, 15, 15);
+}
+
+.iconfont-style3 {
+  /*width: 100%;*/
+  font-size: 45px;
+  text-align: center;
+  padding-bottom: 5px;
+  display: block;
+}
+
+.span-style1 {
+  font-size: 14px;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Helvetica, Tahoma, Arial, "Microsoft YaHei", 微软雅黑, sans-serif;
+  text-align: left;
+  color: rgb(51, 51, 51);
+  position: relative;
+  left: 20px;
+  bottom: 4px;
+}
+
+.label-style2 {
+  font-size: 21px;
+  color: rgb(173, 172, 172);
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.div-style3 {
+  width: 240px;
+  height: 300px;
+  float: right;
+  padding: 15px 20px;
+  background: white;
+  position: relative;
+  border-radius: 10.5px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px -1px 2px);
+}
+
+.div-style3:hover {
+  filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px -2px 4px);
+  transition: all 0.5s;
+}
 
 .div-style2 {
   font-size: 40px;

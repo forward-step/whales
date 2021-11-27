@@ -61,7 +61,7 @@ export const antd = {
         Vue.component(Tabs.name, Tabs);
         Vue.component("ATabPane", TabPane);
         Vue.component('iconfont', createFromIconfontCN({
-            scriptUrl: '//at.alicdn.com/t/font_2775308_0nm0y19nnbu.js', // 在 iconfont.cn 上生成
+            scriptUrl: '//at.alicdn.com/t/font_2775308_w4xujtfkulf.js', // 在 iconfont.cn 上生成
             // scriptUrl: '@/assets/iconfont/iconfont.js', // 在 iconfont.cn 上生成
         }));
     },

@@ -27,6 +27,7 @@
 
 .ant-carousel:hover {
     filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px -2px 4px);
+    transition: all 0.5s;
 }
 
 .ant-image {
