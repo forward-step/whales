@@ -63,8 +63,8 @@
         </a-menu-item>
 
         <a-menu-item key="communication" style="padding-left: 55px">
-            <a-badge count="5" :offset="[-8, 23]" >
-              <iconfont type="icon-duihuaqipao" class="iconfont-style" />
+            <a-badge count="5" :offset="[-6, 24]" >
+              <iconfont type="icon-A24gf-bubble3" class="iconfont-style" />
             </a-badge>
         </a-menu-item>
 
