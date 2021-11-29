@@ -18,6 +18,7 @@ import {
     Col,
     Carousel,
     Card,
+    CardMeta,
     Tabs,
     TabPane
 } from 'ant-design-vue';
@@ -58,6 +59,7 @@ export const antd = {
         Vue.component(Badge.name, Badge);
         Vue.component(Carousel.name, Carousel);
         Vue.component(Card.name, Card);
+        Vue.component(CardMeta.name, CardMeta);
         Vue.component(Tabs.name, Tabs);
         Vue.component("ATabPane", TabPane);
         Vue.component('iconfont', createFromIconfontCN({

@@ -41,12 +41,161 @@
     </a-col>
   </a-row>
 
+  <a-row>
+    <a-col :span="4">
+      <a-card hoverable class="a-card-style">
+        <template #cover>
+          <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </template>
+        <template class="ant-card-actions" #actions>
+          <setting-outlined key="setting" />
+          <edit-outlined key="edit" />
+          <ellipsis-outlined key="ellipsis" />
+        </template>
+        <a-card-meta title="Card title" description="This is the description">
+          <template #avatar>
+            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </template>
+        </a-card-meta>
+      </a-card>
+
+      <a-card hoverable class="a-card-style">
+        <template #cover>
+          <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </template>
+        <template class="ant-card-actions" #actions>
+          <setting-outlined key="setting" />
+          <edit-outlined key="edit" />
+          <ellipsis-outlined key="ellipsis" />
+        </template>
+        <a-card-meta title="Card title" description="This is the description">
+          <template #avatar>
+            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </template>
+        </a-card-meta>
+      </a-card>
+    </a-col>
+
+    <a-col :span="1"></a-col>
+    <a-col :span="4">
+      <a-card hoverable class="a-card-style1">
+        <template #cover>
+          <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </template>
+        <template class="ant-card-actions" #actions>
+          <setting-outlined key="setting" />
+          <edit-outlined key="edit" />
+          <ellipsis-outlined key="ellipsis" />
+        </template>
+        <a-card-meta title="Card title" description="This is the description">
+          <template #avatar>
+            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </template>
+        </a-card-meta>
+      </a-card>
+
+      <a-card hoverable class="a-card-style1">
+        <template #cover>
+          <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </template>
+        <template class="ant-card-actions" #actions>
+          <setting-outlined key="setting" />
+          <edit-outlined key="edit" />
+          <ellipsis-outlined key="ellipsis" />
+        </template>
+        <a-card-meta title="Card title" description="This is the description">
+          <template #avatar>
+            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </template>
+        </a-card-meta>
+      </a-card>
+    </a-col>
+
+    <a-col :span="1"></a-col>
+    <a-col :span="4">
+      <a-card hoverable class="a-card-style1">
+        <template #cover>
+          <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </template>
+        <template class="ant-card-actions" #actions>
+          <setting-outlined key="setting" />
+          <edit-outlined key="edit" />
+          <ellipsis-outlined key="ellipsis" />
+        </template>
+        <a-card-meta title="Card title" description="This is the description">
+          <template #avatar>
+            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </template>
+        </a-card-meta>
+      </a-card>
+    </a-col>
+
+    <a-col :span="1"></a-col>
+    <a-col :span="4">
+      <a-card hoverable class="a-card-style1">
+        <template #cover>
+          <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </template>
+        <template class="ant-card-actions" #actions>
+          <setting-outlined key="setting" />
+          <edit-outlined key="edit" />
+          <ellipsis-outlined key="ellipsis" />
+        </template>
+        <a-card-meta title="Card title" description="This is the description">
+          <template #avatar>
+            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </template>
+        </a-card-meta>
+      </a-card>
+    </a-col>
+
+    <a-col :span="1"></a-col>
+    <a-col :span="4">
+      <a-card hoverable class="a-card-style1">
+        <template #cover>
+          <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        </template>
+        <template class="ant-card-actions" #actions>
+          <setting-outlined key="setting" />
+          <edit-outlined key="edit" />
+          <ellipsis-outlined key="ellipsis" />
+        </template>
+        <a-card-meta title="Card title" description="This is the description">
+          <template #avatar>
+            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          </template>
+        </a-card-meta>
+      </a-card>
+    </a-col>
+  </a-row>
+
 </template>
 
 <script>
   import { defineComponent, ref } from 'vue';
   import {Image} from "@/common/entity/show-articles/Image";
-  import { ReloadOutlined } from '@ant-design/icons-vue';
+  import { ReloadOutlined, SettingOutlined, EditOutlined, EllipsisOutlined } from '@ant-design/icons-vue';
 
   export default defineComponent({
     name: "ShowArticles",
@@ -58,12 +207,28 @@
       }
     },
     components: {
-      ReloadOutlined
+      ReloadOutlined,
+      SettingOutlined,
+      EditOutlined,
+      EllipsisOutlined
     }
   })
 </script>
 
 <style scoped>
+
+.a-card-style1 {
+  width: 218px;
+  position: relative;
+  right: 5px;
+  margin-bottom: 25px;
+}
+
+.a-card-style {
+  width: 218px;
+  margin-bottom: 25px;
+}
+
 .iconfont-style2 {
   float: right;
   font-size: 28px;
