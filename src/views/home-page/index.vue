@@ -31,4 +31,6 @@ export default defineComponent({
 
 <style scoped>
 
+@import "../../assets/resources/home-page/css/style.css";
+
 </style>
