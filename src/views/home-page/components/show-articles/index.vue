@@ -217,16 +217,22 @@
 
 <style scoped>
 
+@import "../../../../assets/resources/show-articles/css/style.css";
+
 .a-card-style1 {
   width: 218px;
   position: relative;
   right: 5px;
   margin-bottom: 25px;
+  border-radius: 10.5px;
+  overflow: hidden;
 }
 
 .a-card-style {
   width: 218px;
   margin-bottom: 25px;
+  border-radius: 10.5px;
+  overflow: hidden;
 }
 
 .iconfont-style2 {
