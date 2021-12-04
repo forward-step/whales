@@ -56,11 +56,38 @@
             </div>
           </template>
 
-          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>
-          <div> <a-image :src=whaleImg :preview="false" /> </div>
-          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>
-          <div> <a-image :src=whaleImg :preview="false" /> </div>
-          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>
+
+          <div class="div-img">
+            <div class="div-image">
+              <div class="image-box" :style="blueWhaleImgStyle"></div>
+            </div>
+          </div>
+          <div class="div-img">
+            <div class="div-image">
+              <div class="image-box" :style="whaleImgStyle"></div>
+            </div>
+          </div>
+          <div class="div-img">
+            <div class="div-image">
+              <div class="image-box" :style="blueWhaleImgStyle"></div>
+            </div>
+          </div>
+          <div class="div-img">
+            <div class="div-image">
+              <div class="image-box" :style="whaleImgStyle"></div>
+            </div>
+          </div>
+          <div class="div-img">
+            <div class="div-image">
+              <div class="image-box" :style="blueWhaleImgStyle"></div>
+            </div>
+          </div>
+
+<!--          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>-->
+<!--          <div> <a-image :src=whaleImg :preview="false" /> </div>-->
+<!--          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>-->
+<!--          <div> <a-image :src=whaleImg :preview="false" /> </div>-->
+<!--          <div> <a-image :src=blueWhaleImg :preview="false" /> </div>-->
 
           <template #nextArrow>
             <div class="custom-slick-arrow" style="right: 10px">
@@ -152,7 +179,8 @@
 
 <script>
     import { defineComponent, ref } from 'vue';
-    import {Image} from "@/common/entity/dynamic-carousel/Image"
+    import {ImgUtil} from "@/common/util/ImgUtil";
+    import {Image} from "@/common/entity/dynamic-carousel/Image";
     import { LeftOutlined, RightOutlined } from '@ant-design/icons-vue';
 
     export default defineComponent({
@@ -160,14 +188,14 @@
         setup() {
             const activeKey = ref('');
             const crownImg = Image.CROWN;
-            const whaleImg = Image.WHALE;
-            const blueWhaleImg = Image.BLUEWHALE;
+            const whaleImgStyle = ImgUtil.getBackImgUrl(Image.WHALE);
+            const blueWhaleImgStyle = ImgUtil.getBackImgUrl(Image.BLUEWHALE);
 
             return {
               activeKey,
               crownImg,
-              whaleImg,
-              blueWhaleImg
+              whaleImgStyle,
+              blueWhaleImgStyle
             }
         },
         components: {
@@ -180,6 +208,33 @@
 <style scoped>
 
 @import "../../../../assets/resources/dynamic-carousel/css/style.css";
+
+.image-box {
+  transition: unset;
+  inset: 0px;
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.div-image {
+  border-radius: 10.5px 10.5px 0px 0px;
+  overflow: hidden;
+  opacity: 1;
+  /*width: 218px;*/
+  height: 300px;
+  /*filter: drop-shadow(rgb(148, 146, 146) 0px 3px 6px);*/
+  transition: unset;
+}
+
+.div-img {
+  transform: translate(0px, 0px) rotate(0deg);
+  /*width: 218px;*/
+  height: 300px;
+  transition: unset;
+  z-index: 0;
+}
 
 .span-praise-hot {
   font-size: 12px;
