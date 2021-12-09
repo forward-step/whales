@@ -1,3 +1,15 @@
+.ant-card-body {
+    padding: 12px;
+    zoom: 1;
+}
+
+.ant-card-meta-avatar {
+    float: none;
+    width: 100%;
+    padding-right: 0px;
+    position: relative;
+}
+
 /*.ant-card {*/
 /*    box-sizing: border-box;*/
 /*    margin: 0;*/
