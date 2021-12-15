@@ -98,43 +98,44 @@
 
     <a-col :span="1"></a-col>
     <a-col :span="4">
-      <a-card hoverable class="a-card-style1">
-        <template #cover>
-          <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-          />
-        </template>
-        <template class="ant-card-actions" #actions>
-          <setting-outlined key="setting" />
-          <edit-outlined key="edit" />
-          <ellipsis-outlined key="ellipsis" />
-        </template>
-        <a-card-meta title="Card title" description="This is the description">
-          <template #avatar>
-            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-          </template>
-        </a-card-meta>
-      </a-card>
+      <single-article />
+<!--      <a-card hoverable class="a-card-style1">-->
+<!--        <template #cover>-->
+<!--          <img-->
+<!--              alt="example"-->
+<!--              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"-->
+<!--          />-->
+<!--        </template>-->
+<!--        <template class="ant-card-actions" #actions>-->
+<!--          <setting-outlined key="setting" />-->
+<!--          <edit-outlined key="edit" />-->
+<!--          <ellipsis-outlined key="ellipsis" />-->
+<!--        </template>-->
+<!--        <a-card-meta title="Card title" description="This is the description">-->
+<!--          <template #avatar>-->
+<!--            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />-->
+<!--          </template>-->
+<!--        </a-card-meta>-->
+<!--      </a-card>-->
 
-      <a-card hoverable class="a-card-style1">
-        <template #cover>
-          <img
-              alt="example"
-              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-          />
-        </template>
-        <template class="ant-card-actions" #actions>
-          <setting-outlined key="setting" />
-          <edit-outlined key="edit" />
-          <ellipsis-outlined key="ellipsis" />
-        </template>
-        <a-card-meta title="Card title" description="This is the description">
-          <template #avatar>
-            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-          </template>
-        </a-card-meta>
-      </a-card>
+<!--      <a-card hoverable class="a-card-style1">-->
+<!--        <template #cover>-->
+<!--          <img-->
+<!--              alt="example"-->
+<!--              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"-->
+<!--          />-->
+<!--        </template>-->
+<!--        <template class="ant-card-actions" #actions>-->
+<!--          <setting-outlined key="setting" />-->
+<!--          <edit-outlined key="edit" />-->
+<!--          <ellipsis-outlined key="ellipsis" />-->
+<!--        </template>-->
+<!--        <a-card-meta title="Card title" description="This is the description">-->
+<!--          <template #avatar>-->
+<!--            <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />-->
+<!--          </template>-->
+<!--        </a-card-meta>-->
+<!--      </a-card>-->
     </a-col>
 
     <a-col :span="1"></a-col>
@@ -211,6 +212,7 @@
   import {ImgUtil} from "@/common/util/ImgUtil";
   import {Image} from "@/common/entity/show-articles/Image";
   import { ReloadOutlined, SettingOutlined, EditOutlined, EllipsisOutlined } from '@ant-design/icons-vue';
+  import singleArticle from "@/views/home-page/components/single-article/index.vue";
 
   export default defineComponent({
     name: "ShowArticles",
@@ -229,7 +231,8 @@
       ReloadOutlined,
       SettingOutlined,
       EditOutlined,
-      EllipsisOutlined
+      EllipsisOutlined,
+      singleArticle
     }
   })
 </script>
