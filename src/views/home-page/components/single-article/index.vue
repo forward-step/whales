@@ -19,8 +19,8 @@
       </div>
       <div class="div-article">
         <span>把圈子变小，把语言变干净，把成绩往上提，把故事往心里收一收，现在想要的以后你都会有。</span>
+        <p style="text-align: right"> - -摘自网络</p>
       </div>
-      <p style="text-align: right"> - -摘自网络</p>
     </div>
   </div>
 </template>
