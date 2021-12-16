@@ -13,3 +13,7 @@
 ::-webkit-scrollbar-track {
     border-radius: 25px;
 }
+
+html {
+  overflow-y: overlay;
+}
