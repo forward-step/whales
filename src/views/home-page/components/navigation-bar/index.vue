@@ -1,7 +1,7 @@
 <template>
     <a-menu class="common" v-model:selectedKeys="current" mode="horizontal">
 
-        <a-menu-item key="logo" style="width: 280px; padding-left: 40px;">
+        <a-menu-item key="logo" style="width: 291px; padding-left: 47px;">
             <a-avatar :src=logoImg :size="64" />
             <a-button type="text" class="logo-button">
                 <div class="logo-text-english">WhaleHub</div>
