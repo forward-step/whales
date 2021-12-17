@@ -72,8 +72,6 @@
 
 <script>
   import { defineComponent, ref } from 'vue';
-  import {ImgUtil} from "@/common/util/ImgUtil";
-  import {Image} from "@/common/entity/show-articles/Image";
   import { ReloadOutlined, SettingOutlined, EditOutlined, EllipsisOutlined } from '@ant-design/icons-vue';
   import singleArticle from "@/views/home-page/components/single-article/index.vue";
 
@@ -81,13 +79,9 @@
     name: "ShowArticles",
     setup() {
       const hotIssueImg = Image.HOTISSUE;
-      const articleImgStyle = ImgUtil.getBackImgUrl(Image.ARTICLEONE);
-      const imgStyle = ImgUtil.getImgHeight(Image.ARTICLEONE);
 
       return {
-        hotIssueImg,
-        articleImgStyle,
-        imgStyle
+        hotIssueImg
       }
     },
     components: {
