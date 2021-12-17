@@ -1,9 +1,9 @@
 <template>
   <div class="article-card">
     <div class="article-card-image">
-      <div class="div-img" :style="imgStyle">
-        <div class="div-image" :style="imgStyle">
-          <div class="image-box" :style="articleImgStyle"></div>
+      <div class="div-img" :style="articleImgStyle">
+        <div class="div-image" :style="articleImgStyle">
+          <div class="image-box" :style="backImgStyle"></div>
         </div>
       </div>
     </div>
@@ -64,18 +64,18 @@
 
 <script>
   import { defineComponent, ref } from 'vue';
-  import {ImgUtil} from "@/common/util/ImgUtil";
+  import {StyleUtil} from "@/common/util/StyleUtil";
   import {Image} from "@/common/entity/single-article/Image";
 
   export default defineComponent({
     name: "SingleArticle",
     setup() {
-      const articleImgStyle = ImgUtil.getBackImgUrl(Image.ARTICLEONE);
-      const imgStyle = ImgUtil.getImgHeight(Image.ARTICLEONE);
+      const backImgStyle = StyleUtil.getBackImgStyle(Image.ARTICLEONE);
+      const articleImgStyle = StyleUtil.getArticleImgStye(Image.ARTICLEONE);
 
       return {
-        articleImgStyle,
-        imgStyle
+        backImgStyle,
+        articleImgStyle
       }
     }
   });

@@ -179,7 +179,7 @@
 
 <script>
     import { defineComponent, ref } from 'vue';
-    import {ImgUtil} from "@/common/util/ImgUtil";
+    import {StyleUtil} from "@/common/util/StyleUtil";
     import {Image} from "@/common/entity/dynamic-carousel/Image";
     import { LeftOutlined, RightOutlined } from '@ant-design/icons-vue';
 
@@ -188,8 +188,8 @@
         setup() {
             const activeKey = ref('');
             const crownImg = Image.CROWN;
-            const whaleImgStyle = ImgUtil.getBackImgUrl(Image.WHALE);
-            const blueWhaleImgStyle = ImgUtil.getBackImgUrl(Image.BLUEWHALE);
+            const whaleImgStyle = StyleUtil.getBackImgStyle(Image.WHALE);
+            const blueWhaleImgStyle = StyleUtil.getBackImgStyle(Image.BLUEWHALE);
 
             return {
               activeKey,
