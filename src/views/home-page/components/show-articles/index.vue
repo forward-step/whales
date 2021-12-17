@@ -72,6 +72,7 @@
 
 <script>
   import { defineComponent, ref } from 'vue';
+  import {Image} from "@/common/entity/show-articles/Image";
   import { ReloadOutlined, SettingOutlined, EditOutlined, EllipsisOutlined } from '@ant-design/icons-vue';
   import singleArticle from "@/views/home-page/components/single-article/index.vue";
 
