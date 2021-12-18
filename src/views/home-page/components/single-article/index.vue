@@ -1,27 +1,24 @@
 <template>
   <div class="article-card">
     <div class="article-card-image">
-      <div class="div-img" :style="articleImgStyle">
-        <div class="div-image" :style="articleImgStyle">
-          <div class="image-box" :style="backImgStyle"></div>
+      <div class="div-img" :style="article.style.articleImg">
+        <div class="div-image" :style="article.style.articleImg">
+          <div class="image-box" :style="article.style.backImg"></div>
         </div>
       </div>
     </div>
     
     <div class="article-card-text">
-      <div class="div-badge">
-        <span class="span-badge">More</span>
+      <div class="div-badge" :style="article.style.badge">
+        <span class="span-badge">{{article.text.badge}}</span>
       </div>
       <div class="div-month">
         <span class="span-month">SEPTEMBER 30TH</span>
       </div>
       <div class="div-title">
-        <span>生活语言</span>
+        <span>{{article.text.title}}</span>
       </div>
-      <div class="div-article">
-        <span>把圈子变小，把语言变干净，把成绩往上提，把故事往心里收一收，现在想要的以后你都会有。</span>
-        <p style="text-align: right;margin: 0;"> - -摘自网络</p>
-      </div>
+      <div v-html="article.text.content" class="div-article" :style="article.style.articleText"></div>
     </div>
     
     <div class="article-card-message">
@@ -29,22 +26,22 @@
         <a-col :span="1"></a-col>
         <a-col :span="6">
           <iconfont type="icon-yanjing" class="iconfont-style" />
-          <span class="span-num">1293</span>
+          <span class="span-num">{{article.number.pageViews}}</span>
         </a-col>
         <a-col :span="6">
           <iconfont type="icon-duihuaqipao" class="iconfont-style" />
-          <span class="span-num">123</span>
+          <span class="span-num">{{article.number.comments}}</span>
         </a-col>
         <a-col :span="6">
           <iconfont type="icon-dianzan" class="iconfont-style" />
-          <span class="span-num">183</span>
+          <span class="span-num">{{article.number.tags}}</span>
         </a-col>
         <a-col :span="4">
           <iconfont type="icon-cuowu3" class="iconfont-style" />
         </a-col>
         <a-col :span="1"></a-col>
       </a-row>
-      <a-row style="height: 100px;">
+      <a-row style="height: 83px;">
         <a-col :span="12">
           <div class="label-style">
             <iconfont type="icon-fenxiang1" style="padding-right: 10px; font-size: 16px;" />
@@ -64,18 +61,14 @@
 
 <script>
   import { defineComponent, ref } from 'vue';
-  import {StyleUtil} from "@/common/util/StyleUtil";
-  import {Image} from "@/common/entity/single-article/Image";
+  import {DataUtil} from "@/common/util/DataUtil";
 
   export default defineComponent({
     name: "SingleArticle",
-    setup() {
-      const backImgStyle = StyleUtil.getBackImgStyle(Image.ARTICLEONE);
-      const articleImgStyle = StyleUtil.getArticleImgStye(Image.ARTICLEONE);
-
-      return {
-        backImgStyle,
-        articleImgStyle
+    props: {
+      article: {
+        type: Object,
+        default: DataUtil.getDefaultArticle()
       }
     }
   });
@@ -97,7 +90,9 @@
   }
 
   .article-card-image {
-
+    /*border-bottom: 1px;*/
+    /*border-bottom-style: solid;*/
+    /*border-bottom-color: rgb(240, 240, 240);*/
   }
 
   .article-card-text {
@@ -116,7 +111,7 @@
     font-family: SimSun, STSong;
     text-align: center;
     color: rgb(7, 7, 7);
-    line-height: 120px;
+    line-height: 100px;
   }
   
   .iconfont-style {
@@ -144,9 +139,9 @@
 
   .div-article {
     font-size: 14px;
-    font-family: arial;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", sans-serif;
     text-align: left;
-    color: rgb(51, 51, 51);
+    color: rgb(100, 100, 100);
   }
 
   .div-title {
@@ -203,7 +198,7 @@
 
   .div-badge {
     width: 58px;
-    background: rgb(238, 70, 70);
+    background: rgb(70, 238, 169);
     border-radius: 5.5px;
     transition: unset;
     position: absolute;

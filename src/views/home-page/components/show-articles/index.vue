@@ -43,28 +43,27 @@
 
   <a-row>
     <a-col :span="4">
-      <single-article />
-      <single-article />
+      <single-article v-for="(article, i) in articleList[0]" :article="article" :key="i" />
     </a-col>
 
     <a-col :span="1"></a-col>
     <a-col :span="4">
-      <single-article />
+      <single-article v-for="(article, i) in articleList[1]" :article="article" :key="i" />
     </a-col>
 
     <a-col :span="1"></a-col>
     <a-col :span="4">
-      <single-article />
+      <single-article v-for="(article, i) in articleList[2]" :article="article" :key="i" />
     </a-col>
 
     <a-col :span="1"></a-col>
     <a-col :span="4">
-      <single-article />
+      <single-article v-for="(article, i) in articleList[3]" :article="article" :key="i" />
     </a-col>
 
     <a-col :span="1"></a-col>
     <a-col :span="4">
-      <single-article />
+      <single-article v-for="(article, i) in articleList[4]" :article="article" :key="i" />
     </a-col>
   </a-row>
 
@@ -72,6 +71,7 @@
 
 <script>
   import { defineComponent, ref } from 'vue';
+  import {DataUtil} from "@/common/util/DataUtil";
   import {Image} from "@/common/entity/show-articles/Image";
   import { ReloadOutlined, SettingOutlined, EditOutlined, EllipsisOutlined } from '@ant-design/icons-vue';
   import singleArticle from "@/views/home-page/components/single-article/index.vue";
@@ -80,9 +80,11 @@
     name: "ShowArticles",
     setup() {
       const hotIssueImg = Image.HOTISSUE;
+      const articleList = DataUtil.getArticleList();
 
       return {
-        hotIssueImg
+        hotIssueImg,
+        articleList
       }
     },
     components: {
