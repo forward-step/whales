@@ -4,6 +4,27 @@ import {Article} from "@/common/entity/show-articles/Article";
 
 export class DataUtil {
 
+    static scrollToButtom(vue) {
+        console.log(vue.$refs.content);
+        console.log("vue.$refs.content.scrollHeight: " + vue.$refs.content.scrollHeight);
+        console.log("vue.$refs.content.scrollTop: " + vue.$refs.content.scrollTop);
+        console.log("document.documentElement.scrollTop: " + document.documentElement.scrollTop);
+        console.log("document.body.scrollTop: " + document.body.scrollTop);
+        console.log("window.pageYOffset: " + window.pageYOffset);
+    }
+
+    static getArticleByNum(num) {
+        let articles = this.getArticles();
+        let lstArticle = [];
+        let start = num === 0 ? 0 : 5;
+        let end = num === 0 ? 5 : 10;
+        for (let i = start; i < end; i++) {
+            lstArticle.push(articles[i]);
+        }
+
+        return lstArticle;
+    }
+
     static getDefaultArticle() {
         return Article.ONE;
     }

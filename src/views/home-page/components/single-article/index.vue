@@ -60,7 +60,7 @@
 </template>
 
 <script>
-  import { defineComponent, ref } from 'vue';
+  import { defineComponent } from 'vue';
   import {DataUtil} from "@/common/util/DataUtil";
 
   export default defineComponent({

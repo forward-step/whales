@@ -42,7 +42,7 @@
   </a-row>
 
   <a-row>
-    <a-col :span="4">
+    <a-col :span="4" ref="content">
       <single-article v-for="(article, i) in articleList[0]" :article="article" :key="i" />
     </a-col>
 
@@ -67,24 +67,26 @@
     </a-col>
   </a-row>
 
+  <div class="div-outlined-style">
+    <DoubleRightOutlined style="width: 45px; height: 45px; -webkit-transform: rotate(90deg);" @click="addArticle()" />
+  </div>
+
 </template>
 
 <script>
   import { defineComponent, ref } from 'vue';
   import {DataUtil} from "@/common/util/DataUtil";
   import {Image} from "@/common/entity/show-articles/Image";
-  import { ReloadOutlined, SettingOutlined, EditOutlined, EllipsisOutlined } from '@ant-design/icons-vue';
+  import { ReloadOutlined, SettingOutlined, EditOutlined, EllipsisOutlined, DoubleRightOutlined } from '@ant-design/icons-vue';
   import singleArticle from "@/views/home-page/components/single-article/index.vue";
 
   export default defineComponent({
     name: "ShowArticles",
-    setup() {
-      const hotIssueImg = Image.HOTISSUE;
-      const articleList = DataUtil.getArticleList();
-
+    data() {
       return {
-        hotIssueImg,
-        articleList
+        num: 0,
+        hotIssueImg: Image.HOTISSUE,
+        articleList: DataUtil.getArticleList()
       }
     },
     components: {
@@ -92,12 +94,40 @@
       SettingOutlined,
       EditOutlined,
       EllipsisOutlined,
+      DoubleRightOutlined,
       singleArticle
+    },
+    methods: {
+      addArticle: function () {
+        let articles = DataUtil.getArticleByNum(this.num++);
+        for (let i = 0; i < 5; i++) {
+          this.articleList[i].push(articles[i]);
+        }
+
+        if (this.num === 2) {
+          this.num = 0;
+        }
+        // DataUtil.scrollToButtom(this);
+      }
     }
   })
 </script>
 
 <style scoped>
+
+.div-outlined-style {
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  color: rgb(133, 131, 131);
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
+.div-outlined-style:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
 
 .iconfont-style2 {
   float: right;
