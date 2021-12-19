@@ -8,6 +8,7 @@
       <a-col :span="20">
         <dynamic-dynamic />
         <show-articles />
+        <newest-articles />
       </a-col>
       <a-col :span="2"></a-col>
     </a-row>
@@ -22,6 +23,7 @@ import {StyleUtil} from "@/common/util/StyleUtil";
 import navigationBar from '@/views/home-page/components/navigation-bar/index.vue'
 import dynamicDynamic from '@/views/home-page/components/dynamic-carousel/index.vue'
 import showArticles from '@/views/home-page/components/show-articles/index.vue'
+import newestArticles from '@/views/home-page/components/newest-articles/index.vue'
 
 export default defineComponent({
     name: "HomePage",
@@ -35,7 +37,8 @@ export default defineComponent({
     components: {
         navigationBar,
         dynamicDynamic,
-        showArticles
+        showArticles,
+        newestArticles
     }
 });
 </script>

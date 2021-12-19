@@ -1,13 +1,13 @@
 <template>
   <a-row style="margin-top: 30px;margin-bottom: 4px">
     <a-col :span="1" style="text-align: center">
-      <a-avatar :src=hotIssueImg size="large" />
+      <a-avatar class="a-avatar-style" :src=newestImg size="large" />
     </a-col>
     <a-col :span="3">
       <div class="recommend-style">
         <div style="text-align: left">
         <span class="recommend-font-style">
-          热门瞬间
+          最新瞬间
         </span>
         </div>
       </div>
@@ -76,16 +76,16 @@
 <script>
   import { defineComponent, ref } from 'vue';
   import {DataUtil} from "@/common/util/DataUtil";
-  import {Image} from "@/common/entity/show-articles/Image";
+  import {Image} from "@/common/entity/newest-articles/Image";
   import { ReloadOutlined, SettingOutlined, EditOutlined, EllipsisOutlined, DoubleRightOutlined } from '@ant-design/icons-vue';
   import singleArticle from "@/views/home-page/components/single-article/index.vue";
 
   export default defineComponent({
-    name: "ShowArticles",
+    name: "NewestArticles",
     data() {
       return {
         num: 0,
-        hotIssueImg: Image.HOTISSUE,
+        newestImg: Image.NEWEST,
         articleList: DataUtil.getArticleList()
       }
     },
@@ -114,6 +114,19 @@
 </script>
 
 <style scoped>
+
+:deep(.ant-avatar-lg) {
+  width: 88px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 0;
+}
+
+.a-avatar-style {
+  position: relative;
+  right: 43px;
+  bottom: 8px;
+}
 
 .div-outlined-style {
   width: 100%;
