@@ -30,12 +30,14 @@ export class StyleUtil {
 
         let smallNum = img.width < img.height ? img.width : img.height;
         let bigNum = img.width > img.height ? img.width : img.height;
+        let smallHeight = smallNum * 0.2;
+        let bigHeight = bigNum * 0.2;
 
-        let height = smallNum * 0.2;
-        if (smallNum * 2 < bigNum) {
-            height = bigNum * 0.2;
+        let height = smallHeight;
+        if (smallNum * 2 < bigNum || bigHeight < 300) {
+            height = bigHeight;
         }
-        if (height > 400 || smallNum === 1080) {
+        if (height > 400) {
             height = height / 2;
         }
         if (height < 170) {
