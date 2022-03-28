@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+    /*display: none;*/
+    position: absolute;
+    width: 8px;
+    height: 8px;
+}
+/*定义滑块颜色+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: rgba(24,31,41,.1);
+}
+
+/*定义滚动条轨道内阴影+圆角*/
+::-webkit-scrollbar-track {
+    border-radius: 25px;
+}
+
+/*边角*/
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+html {
+  overflow-y: overlay;
+}

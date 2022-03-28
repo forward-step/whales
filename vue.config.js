@@ -7,5 +7,11 @@ module.exports = {
                 path.resolve(__dirname, './src/css/global.less'),
             ]
         }
+    },
+    devServer: {
+        host: '0.0.0.0',//target host
+        port: 8080,
+        hot: true,
+        disableHostCheck: true,
     }
 };

@@ -1,0 +1,50 @@
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+    /*font-family: "Microsoft Yahei",serif;*/
+    /*font-weight: bold;*/
+    /*background: #939DC1;*/
+    /*color: white !important;*/
+    color: white;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+     /*border-bottom: 2px solid #1890ff;*/
+    border-bottom: none;
+ }
+
+.ant-input-affix-wrapper {
+    box-sizing: border-box;
+    margin: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    display: inline-flex;
+    border: 1px solid #d9d9d9;
+    border-radius: 15.5px;
+    padding: 4px 11px;
+    width: 100%;
+    text-align: start;
+    background-color: #fff;
+    background-image: none;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    line-height: 1.5715;
+}
+
+.ant-input-prefix {
+    /*width: 70px;*/
+    /*height: 33px;*/
+    /*background: #D4D1E7;*/
+    font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, Helvetica, Tahoma, Arial, "Microsoft YaHei", 微软雅黑, sans-serif;
+    font-weight: bold;
+    /*filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 3px 6px);*/
+    /*transform: translate(118px, 0px) rotate(0deg);*/
+    /*border-radius: 7.5px 0px 0px 7.5px;*/
+    transition: unset;
+    /*position: relative;*/
+    /*bottom: 4px;*/
+    /*right: 11px;*/
+    text-align: center;
+    /*padding-left: 12px;*/
+}
